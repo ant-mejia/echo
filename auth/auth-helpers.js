@@ -33,9 +33,15 @@ function loginRequired(req, res, next) {
   return next();
 }
 
+function showFeedifUser(req, res, next) {
+
+  return next();
+}
+
 module.exports = {
   comparePass,
   loginRedirect,
   loginRequired,
-  createUser
+  createUser,
+  showFeedifUser
 };
