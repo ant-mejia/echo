@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+  <div class='container'>
+    <h1>Register</h1>
+    <div class='row'>
+      <form action='/auth/register' method='post'>
+        <div>
+          <label>Username:</label>
+          <input type='text' name='username' />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type='password' name='password' />
+        </div>
+        <div>
+          <label>First Name:</label>
+          <input type='text' name='firstName' />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type='text' name='lastName' />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type='text' name='email' />
+        </div>
+        <div>
+          <label>Date of Birth:</label>
+          <input type='date' name='dob' />
+        </div>
+        <div>
+          <input type='submit' value='Register' />
+        </div>
+      </form>
+    </div>
+  </div>
+<% include ../partials/footer %>

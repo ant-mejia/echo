@@ -6,9 +6,19 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+
+//trouble had my routes named as users instead of user
+var users = require('./routes/user');
+//added
+var passport = require('passport');
+var session = require('express-session');
+//added routes
+var authRoutes = require('./routes/auth.js');
+var userRoutes = require('./routes/user.js');
 
 var app = express();
+//added
+require('dotenv').config();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,13 +33,28 @@ app.use(cookieParser());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
-  indentedSyntax: true,
+  indentedSyntax: false,
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// added for express-session and passport require
+// app.use(session({
+//   secret: process.env.SECRET_KEY,
+//   resave: false,
+//   saveUninitialized: true
+// }));
+//not sure if i should add
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
 app.use('/', index);
-app.use('/users', users);
+// app.use('/users', users);
+//ADDED USER ROUTES
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
