@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include ./partials/header %>
+        <div class>
+          <h1>index page</h1>
+          <a href='/auth/register'>Register</a>
+          <a href='/auth/login'>Sign In</a>
+        </div>
+
+<% include ./partials/footer %>
