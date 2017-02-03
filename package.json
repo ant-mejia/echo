@@ -21,6 +21,7 @@
     "psql": "0.0.1",
     "sequelize": "^3.30.1",
     "sequelize-cli": "^2.5.1",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "socket.io-client": "^1.7.2"
   }
 }
