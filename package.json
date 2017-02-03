@@ -13,6 +13,7 @@
     "dotenv": "^4.0.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",
+    "express-sessions": "^1.0.6",
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
     "nodemon": "^1.11.0",
