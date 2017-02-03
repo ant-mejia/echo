@@ -33,6 +33,7 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/auth/login',
     failureFlash: true
   })
+
 );
 //////////////////////////////////////////////////////////
 //                    TESTING                           //
