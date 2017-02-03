@@ -1,7 +1,7 @@
 {
   "development": {
     "password": null,
-    "database": "yikyak",
+    "database": "echo",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
