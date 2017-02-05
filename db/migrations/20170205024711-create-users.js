@@ -9,23 +9,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       username: {
-        type: Sequelize.STRING(32),
+        type: Sequelize.STRING(255),
         unique: true
       },
       password: {
         type: Sequelize.TEXT
       },
       email: {
-        type: Sequelize.STRING(128)
+        type: Sequelize.STRING(128),
+        unique: true
       },
       firstName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
       lastName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(255)
       },
-      dob: {
-        type: Sequelize.DATE
+      rank: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0
       },
       createdAt: {
         allowNull: false,

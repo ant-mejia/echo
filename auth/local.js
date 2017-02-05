@@ -11,7 +11,7 @@ init();
 
 passport.use(new LocalStrategy(options, (username, password, done) => {
   // check to see if the username exists
-  models.User.findOne({
+  models.Users.findOne({
     where: {
       username: username
     }
