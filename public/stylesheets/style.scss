@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Lato+Slab|Open+Sans:400italic,700italic,400,700);
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$main-bg: #E3DED9;
+$lato: 'Lato', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+// Styles
+body {
+  font-family: $lato;
+  font-weight: normal;
+  color: $primary-color;
+  background-color: $main-bg;
+}

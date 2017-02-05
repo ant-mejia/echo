@@ -10,20 +10,25 @@ module.exports = {
       },
       username: {
         type: Sequelize.STRING(255),
+        allowNull: false,
         unique: true
       },
       password: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING(128),
+        allowNull: false,
         unique: true
       },
       firstName: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.STRING(255),
+        allowNull: false
       },
       lastName: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.STRING(255),
+        allowNull: false
       },
       rank: {
         type: Sequelize.INTEGER,

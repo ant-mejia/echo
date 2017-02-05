@@ -1,2 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Lato+Slab|Open+Sans:400italic,700italic,400,700);
+body {
+  font-family: "Lato", serif;
+  font-weight: normal;
+  color: #333;
+  background-color: #E3DED9; }
 
 /*# sourceMappingURL=style.css.map */

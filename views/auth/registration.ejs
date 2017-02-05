@@ -1,36 +1,21 @@
-<% include ../partials/header %>
-  <div class='container'>
-    <h1>Register</h1>
-    <div class='row'>
-      <form action='/auth/register' method='post'>
+<!DOCTYPE html>
+<html>
+  <% include ../partials/head %>
+  <body>
+    <% include ../partials/header %>
+      <div class='container'>
+        <h1>You have to login!</h1>
         <div>
-          <label>Username:</label>
-          <input type='text' name='username' />
+          <form action='/auth/register' method='post'>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='username' placeholder="username" />
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='password' name='password' placeholder="password" />
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='firstName' placeholder="firstName" />
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='lastName' placeholder="lastName" />
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='email' placeholder="email" />
+            <button class="uk-button uk-button-primary" type="submit">Register</button>
+          </form>
         </div>
-        <div>
-          <label>Password:</label>
-          <input type='password' name='password' />
-        </div>
-        <div>
-          <label>First Name:</label>
-          <input type='text' name='firstName' />
-        </div>
-        <div>
-          <label>Last Name:</label>
-          <input type='text' name='lastName' />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type='text' name='email' />
-        </div>
-        <div>
-          <label>Date of Birth:</label>
-          <input type='date' name='dob' />
-        </div>
-        <div>
-          <input type='submit' value='Register' />
-        </div>
-      </form>
-    </div>
-  </div>
-<% include ../partials/footer %>
+      </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

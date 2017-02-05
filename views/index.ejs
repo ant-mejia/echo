@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>
-        <%= title %>
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<% include partials/head %>
 
 <body class='<%= title %>'>
-    I am a header partial
+    <% include partials/header %>
     <div class>
         <h1>index page</h1>
         <a href='/auth/register'>Register</a>
         <a href='/auth/login'>Sign In</a>
     </div>
-    I am a footer partial
+    <% include partials/footer %>
 </body>
 
 </html>

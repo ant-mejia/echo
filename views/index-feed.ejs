@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>
-        Feed
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body class='Feed'>
-    I am a header partial
-    <div class>
-        <h1>Feed</h1>
-        <a href='/auth/register'>Register</a>
-        <a href='/auth/login'>Sign In</a>
-        <% messages.forEach((item) => { %>
-            <p>
-                <%= item.content %>
-            </p>
-            <% }) %>
-    </div>
-    I am a footer partial
-</body>
+<% include partials/head %>
+    <body class='Feed'>
+      <div class="uk-container">
+        <% include partials/header %>
+            <div>
+                <h1>Feed</h1>
+                <% messages.forEach((item) => { %>
+                    <p>
+                      <%= item.content %>
+                    </p>
+                <% }) %>
+            </div>
+            <% include partials/footer %>
+        </div>
+    </body>
 
 </html>
