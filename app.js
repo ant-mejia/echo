@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // added for express-session and passport require
 app.use(session({
-  secret: process.env.K,
+  secret: process.env.SECRET_KEY,
   resave: false,
   saveUninitialized: true
 }));
