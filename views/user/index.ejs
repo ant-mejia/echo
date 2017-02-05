@@ -1,8 +1,13 @@
-<% include ../partials/header %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-
-<a href="/auth/logout">logout</a>
-
-<% include ../partials/footer %>
+<!DOCTYPE html>
+<html>
+  <% include ../partials/head %>
+  <body>
+    <% include ../partials/header %>
+      <div class='main-wrapper'>
+        <div class="uk-container">
+          <h1>You are now signed in</h1>
+        </div>
+      </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

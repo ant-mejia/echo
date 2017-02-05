@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var port = 3200;
 
 var index = require('./routes/index');
 
@@ -73,6 +74,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+app.listen(port);
+console.log("Listening on port " + port);
 
 module.exports = app;
 //sequelize model:create --name Users --attributes "username:string(255) password:text email:string(128) firstName:string(255) lastName:string(255) rank:int"

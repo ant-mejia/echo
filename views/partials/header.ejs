@@ -1,24 +1,19 @@
-<header>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo blue-text darken-4"><i class="material-icons">chat</i>
-      <ul class="right hide-on-med-and-down">
-
-      </ul>
-      <ul id="nav-mobile" class="side-nav">
-        <li class="mobile-profile">
-         <div class="profile-inner">
-            <div class="pp-container">
-
-            </div>
-            <h3>John Doe</h3>
-            <h5>Creative UI/UX Expert</h5>
-            <a href='/auth/register'>Register</a>
-            <a href='/auth/login'>Sign In</a>
-          </div>
-        </li><!-- mini profile end-->
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+      <a class="uk-navbar-item uk-logo" href="/">Logo</a>
+        <ul class="uk-navbar-nav uk-navbar-right">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
+        </ul>
     </div>
-  </nav>
-</header>
+</nav>

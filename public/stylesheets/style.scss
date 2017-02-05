@@ -1,15 +1,37 @@
-@import url(http://fonts.googleapis.com/css?family=Lato+Slab|Open+Sans:400italic,700italic,400,700);
-
-$font-stack:    Helvetica, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Lato:200,300+Slab|Open+Sans:400italic,700italic,400,700);
+$font-stack: Helvetica, sans-serif;
 $primary-color: #333;
-$main-bg: #E3DED9;
+$main-bg: #fbf8f4;
 $lato: 'Lato', serif;
-$open-sans: 'Open Sans', sans-serif;
+$open-sans: 'Open Sans', sans-serif; // Styles
 
-// Styles
-body {
-  font-family: $lato;
-  font-weight: normal;
-  color: $primary-color;
-  background-color: $main-bg;
+html {
+  height: 100%;
+
+  body {
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 200;
+      font-family: $lato;
+    }
+    display         : flex;
+    min-height      : 100%;
+    flex-direction  : column;
+    font-family     : $lato;
+    font-weight     : normal;
+    color           : $primary-color;
+    background-color: $main-bg;
+
+    form#login {
+      input {
+        display: block;
+      }
+    }
+
+    .main-wrapper {
+      flex: 1;
+    }
+  }
 }

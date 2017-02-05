@@ -1,8 +1,23 @@
-@import url(http://fonts.googleapis.com/css?family=Lato+Slab|Open+Sans:400italic,700italic,400,700);
-body {
-  font-family: "Lato", serif;
-  font-weight: normal;
-  color: #333;
-  background-color: #E3DED9; }
+@import url(http://fonts.googleapis.com/css?family=Lato:200,300+Slab|Open+Sans:400italic,700italic,400,700);
+html {
+  height: 100%; }
+  html body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    font-family: "Lato", serif;
+    font-weight: normal;
+    color: #333;
+    background-color: #fbf8f4; }
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4 {
+      font-weight: 200;
+      font-family: "Lato", serif; }
+    html body form#login input {
+      display: block; }
+    html body .main-wrapper {
+      flex: 1; }
 
 /*# sourceMappingURL=style.css.map */

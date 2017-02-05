@@ -3,18 +3,25 @@
 
 <% include partials/head %>
     <body class='Feed'>
-      <div class="uk-container">
-        <% include partials/header %>
-            <div>
+      <% include partials/header %>
+        <div class="main-wrapper">
+            <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
                 <% messages.forEach((item) => { %>
-                    <p>
-                      <%= item.content %>
-                    </p>
+                    <p><%= item.content %></p>
                 <% }) %>
+                <div>
+                  <button class="uk-button uk-button-default uk-toggle" type="button" uk-toggle="target: #add-message">Add</button>
+                  <div id="add-message">
+                    <form class="new-message" action="/" method="post">
+                      <input class="uk-input uk-form-blank uk-form-width-medium db" type="text" name="content" placeholder="Enter Message">
+                      <button class="uk-button uk-button-primary db" type="submit">Sign In</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
-            <% include partials/footer %>
-        </div>
+        <% include partials/footer %>
     </body>
-
+    <% include partials/scripts %>
 </html>
