@@ -5,7 +5,7 @@ const msg = require('../msgs/msg');
 const models = require('../db/models/index');
 
 
-get the messages by id
+//get the messages by id
 router.get('/:id', function(req, res, next) {
 models.Messages.findById(req.params.id).then(function(message) {
   res.render('message/show', {

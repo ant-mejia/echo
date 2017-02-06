@@ -16,8 +16,6 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
-    html body nav {
-      margin-bottom: -100%; }
     html body .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 120px 10% 0;

@@ -9,6 +9,6 @@
         </div>
       </div>
       <a href="<%= `/user/${user.id}/edit` %>">Edit Profile</a>
-      <a href="/auth/logout">Logout</a>
+      <a href="/logout">Logout</a>
+      <a href="<%= `/user/${user.id}/delete` %>">Delete Profile</a>
     <% include ../partials/footer %>
-

@@ -33,9 +33,9 @@ html {
     color         : $primary-color;
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
-    nav {
-      margin-bottom: -100%;
-    }
+    // nav {
+    //   margin-bottom: -100%;
+    // }
 
     .main-profile-card {
       background: $green-gradient;
