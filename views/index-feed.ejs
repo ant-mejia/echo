@@ -8,14 +8,19 @@
             <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
                 <% include partials/message-feed %>
-                <div>
-                  <button class="uk-button uk-button-default uk-toggle" type="button" uk-toggle="target: #add-message">Add</button>
-                  <div id="add-message">
-                    <form class="new-message" action="/" method="post">
-                      <input class="uk-input uk-form-blank uk-form-width-medium db" type="text" name="content" placeholder="Enter Message">
-                      <button class="uk-button uk-button-primary db" type="submit">Sign In</button>
-                    </form>
-                  </div>
+                <a class="uk-button uk-button-default" href="#modal-full" uk-toggle>Open</a>
+                <div id="modal-full" class="uk-modal-full" uk-modal>
+                    <div class="uk-modal-dialog">
+                        <button class="uk-modal-close-full" type="button" uk-close></button>
+                        <div>
+                            <div class="uk-padding-large uk-height-viewport">
+                              <form class="new-message" action="/" method="post">
+                                <input class="uk-input uk-form-blank uk-form-width-medium db" type="text" name="content" placeholder="Enter Message">
+                                <button class="uk-button uk-button-primary db" type="submit">Add Message</button>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
