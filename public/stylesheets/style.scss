@@ -1,11 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 $main-bg: #fbf8f4;
 $secondary-bg: #e5f6f3;
 $navbg: #fbf8f4;
 $icon-color: #c0c0c0;
-$lato: 'Lato', serif;
+$text-emphasis: #556073;
+$lato: 'Lato', sans-serif;
+$Comfortaa: 'Comfortaa', sans-serif;
 $open-sans: 'Open Sans', sans-serif; // Styles
 
 html {
@@ -43,17 +45,29 @@ html {
     }
 
     ul#message-list {
-      padding: 0;
-      margin : 0;
+      padding    : 0;
+      margin     : 0;
+      font-family: $Comfortaa;
 
       li {
         div {
-          padding: 0 80px;
+          padding: 0 40px;
+
+          p {
+            font-weight: 400;
+            margin     : 0;
+            color      : $icon-color;
+          }
+
+          span.title {
+            color    : $text-emphasis;
+            font-size: 1.3em;
+          }
         }
       }
 
       li span.title::before {
-        content         : "";
+        content         : " ";
         width           : 7px;
         height          : 7px;
         border-radius   : 100%;
