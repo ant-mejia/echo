@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var authHelpers = require('../auth/auth-helpers');
+const bcrypt = require('bcryptjs');
+
 
 //added to for user
 var models = require('../db/models/index');
@@ -48,23 +50,34 @@ router.get('/:id/edit', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-  models.Users.update({
-    name: req.body.name,
-    password: req.body.password,
-    email: req.body.email,
-    firstName: req.body.firstname,
-    lastName: req.body.lastname
-  }, { where: { id: req.params.id } }).then(function() {
-    res.redirect('/user/' + req.params.id);
-  });
-});
 
-router.delete('/:id', function(req, res, next) {
-  models.Users.destroy({
-    where: { id: req.params.id }
-  }).then(function(user) {
-    res.redirect('/user');
-  });
-});
+  const salt = bcrypt.genSaltSync();
+  const hash = bcrypt.hashSync(req.body.password, salt);
+   models.Users.update({
+     password: hash,
+     email: req.body.email,
+     firstName: req.body.firstName,
+     lastName: req.body.lastName
+   }, { where: { id: req.params.id } }).then(function() {
+     res.redirect('/');
+   });
+ });
+
+ //posts to database?
+  //  router.post('/', function(req, res, next) {
+  //   models.Users.create({
+  //     password: req.body.password,
+  //     email: req.body.email,
+  //     firstName: req.body.firstName,
+  //     lastName: req.body.lastName
+  //   }).then(function(){
+  //     res.redirect('/user/')
+  //   })
+  // });
+
+///////////////////////////////////////////////////////////////////////////////
+//                            TESTING                                       //
+///////////////////////////////////////////////////////////////////////////////
+
 
 module.exports = router;
