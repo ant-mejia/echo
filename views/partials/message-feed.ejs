@@ -2,10 +2,14 @@
   <% messages.forEach((item) => { %>
       <li class="messasge">
       <div>
-        <span class="title"><%= item.content %></span>
+        <span class="title">
+          <a href="message/show">
+          <%= item.content %>
+          </a>
+        </span>
         <p>@<%= item.originId %></p>
       </div>
-      </li>
+  </li>
   <% }) %>
 
 </ul>

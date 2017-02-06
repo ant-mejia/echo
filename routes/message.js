@@ -17,7 +17,7 @@ const models = require('../db/models/index');
 
 //not working yet
 router.get('/:id/show', function(req, res, next) {
-  models.Messages.findById(req.params.id).then(function(Messages) {
+  models.Messages.findById(req.params.id).then(function(Message) {
     res.render('message/show', { message: message });
   });
 });
