@@ -16,10 +16,14 @@ var session = require('express-session');
 //added routes
 var authRoutes = require('./routes/auth.js');
 var userRoutes = require('./routes/user.js');
+//added for editing
+var methodOverride = require('method-override');
 
 var app = express();
 //added
 require('dotenv').config();
+//use edditing
+app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
