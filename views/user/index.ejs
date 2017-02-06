@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <% include ../partials/head %>
@@ -11,5 +12,19 @@
       <a href="<%= `/user/${user.id}/edit` %>">Edit Profile</a>
       <a href="/auth/logout">Logout</a>
     <% include ../partials/footer %>
+=======
+<% include ../partials/head.ejs %>
+  <body>
+    <% include ../partials/header.ejs %>
+    <main>
+      <div class="container">
+        <p>Hello, this is the user profile page!</p>
+        <p><%= user.username %></p>
+        <p><%= user.email %></p>
+        <a href="/auth/logout">LOG OUT</a>
+      </div>
+    </main>
+    <% include ../partials/footer.ejs %>
+>>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
   </body>
 </html>

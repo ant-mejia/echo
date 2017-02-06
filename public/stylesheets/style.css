@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(http://fonts.googleapis.com/css?family=Lato:100,200,300+Slab|Open+Sans:400italic,700italic,400,700);
 html {
   height: 100%; }
@@ -39,3 +40,29 @@ html {
         /* or whatever color you prefer */ }
 
 /*# sourceMappingURL=style.css.map */
+=======
+header {
+  background-color: #00838f;
+  color: white;
+}
+
+header .container h1 {
+  font-size: 36px;
+  font-family: 'Righteous', cursive;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
+footer {
+  color: white;
+  font-family: 'Righteous', cursive;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+>>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
