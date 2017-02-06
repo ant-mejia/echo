@@ -5,18 +5,18 @@ const msg = require('../msgs/msg');
 const models = require('../db/models/index');
 
 
-//get the messages by id
-// router.get('/:id', function(req, res, next) {
-// models.Messages.findById(req.params.id).then(function(message) {
-//   res.render('/message/show', {
-//     title: 'message',
-//     messages: msg
-//   });
-// });
-// });
+get the messages by id
+router.get('/:id', function(req, res, next) {
+models.Messages.findById(req.params.id).then(function(message) {
+  res.render('message/show', {
+    title: 'message',
+    messages: msg
+  });
+});
+});
 
 //not working yet
-router.get('/:id/show', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
   models.Messages.findById(req.params.id).then(function(Message) {
     res.render('message/show', { message: message });
   });
