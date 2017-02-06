@@ -1,18 +1,15 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 const authHelpers = require('../auth/auth-helpers');
 const msg = require('../msgs/msg');
 const models = require('../db/models/index');
-const humanize = require('humanize');
-const moment = require('moment');
 
 /* GET home page. */
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
     models.Messages.findAll({}).then(function(msgs) {
       res.render('index-feed', {
-        user: req.user,
-        joinDate: moment(req.user.createdAt).fromNow(),
+        title: req.user.username,
         messages: msgs
       });
     });

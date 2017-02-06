@@ -8,16 +8,6 @@ var stickys = UIkit.sticky('.sticky', {
 });
 
 // Functional components should omit the 'element' argument.
-$(document).ready(function() {
-  var navbar = UIkit.navbar('nav');
-  var toggle = UIkit.toggle('.uk-toggle',{});
-  var scroolspy = UIkit.scrollspy('.main-profile-card', {
-    inview: function () {
-      $('nav.uk-navbar-container').removeClass('uk-navbar-transparent');
-    },
-    outview: function () {
-      alert('oh!')
-    }
-  });
-});
+var navbar = UIkit.navbar('nav');
+var toggle = UIkit.toggle('.uk-toggle',{});
 </script>

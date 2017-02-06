@@ -9,7 +9,6 @@ $text-emphasis: #556073;
 $green: #64A6AA;
 $light-green: #91C7C1;
 $green-gradient: linear-gradient($green, $light-green);
-$light-text: rgba(255,255,255,.7);
 $lato: 'Lato', sans-serif;
 $Comfortaa: 'Comfortaa', sans-serif;
 $open-sans: 'Open Sans', sans-serif; // Styles
@@ -35,16 +34,12 @@ html {
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     nav.uk-navbar-transparent {
+=======
+    nav {
+>>>>>>> parent of b8a72d1... Added moment.js
       margin-bottom: -100%;
-
-      a {
-        color: $light-text;
-
-        &:hover {
-          color: #fff;
-        }
-      }
     }
 =======
     // nav {
@@ -56,18 +51,6 @@ html {
       background: $green-gradient;
       padding   : 120px 10% 0;
       overflow  : hidden;
-
-      h2.profile-name {
-        font-family   : $Comfortaa;
-        margin-bottom : 0;
-        color         : $light-text;
-        letter-spacing: 0.1em;
-      }
-
-      h4.profile-details {
-        margin: 0;
-        color : $light-text;
-      }
     }
 
     form#login {
