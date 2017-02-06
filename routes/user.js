@@ -9,73 +9,62 @@ var models = require('../db/models/index');
 
 
 //get user route
-router.get('/', authHelpers.loginRequired, (req, res, next) => {
+router.get('/', function(req, res, next) {
+  models.Users.findAll({}).then(function(user) {
   res.render('user/index', {
     user: req.user.dataValues,
     title: 'user',
     currentRoute: 'user'
   });
+  });
+});
+////////////////////////////////////
+router.get('/new', function(req, res, next) {
+  res.render('user/new');
 });
 
+router.post('/', function(req, res, next) {
+  models.Users.create({
+      name: req.body.name,
+      password: req.body.password,
+      email: req.body.email,
+      firstName: req.body.firstname,
+      lastName: req.body.lastname
+  }).then(function() {
+    res.redirect('/user')
+  });
+});
 
-///////////////////////////////////////////////////////////////////////////////
-//                            TESTING                                       //
-///////////////////////////////////////////////////////////////////////////////
+router.get('/:id', function(req, res, next) {
+  models.Users.findById(req.params.id).then(function(user) {
+    res.render('user/show', { user: user });
+  });
+});
 
-//editing pages
-//edit the show page (router for edit page)
-
-// router.get('/user/:id', function(req, res, next) {
-//   models.user.findById(req.params.id).then(function(data) {
-//     res.render('user/edit', {
-//       user: req.user.dataValues,
-//       title: 'user',
-//       currentRoute: 'user'
-//      });
-//   });
-// });
-//
-// router.get('/user/:id', authHelpers.loginRequired, (req, res, next) => {
-//   res.render('user/edit', {
-//     user: req.user.dataValues,
-//     title: 'user',
-//     currentRoute: 'user'
-//   });
-// });
-
-
-
-
-// router.get('user/:id/edit', function(req, res, next) {
-//   res.render('/edit', {
-//     user: req.user.dataValues.id,
-//     title: 'user',
-//     currentRoute: 'user'
-//   });
-// });
-
-//IT WORKS!!!!!!!! Route to edit page
 router.get('/:id/edit', function(req, res, next) {
   models.Users.findById(req.params.id).then(function(user) {
     res.render('user/edit', { user: user });
   });
 });
 
-//edit allow the edit to work and redirects user to info page
-//NOT WORKING
 router.put('/:id', function(req, res, next) {
-   models.Users.update({
-     password: req.body.password,
-     email: req.body.email,
-     firstName: req.body.firstName,
-     lastName: req.body.lastName
-   }, { where: { id: req.params.id } }).then(function() {
-     res.redirect('/user/' + req.params.id);
-   });
- });
+  models.Users.update({
+    name: req.body.name,
+    password: req.body.password,
+    email: req.body.email,
+    firstName: req.body.firstname,
+    lastName: req.body.lastname
+  }, { where: { id: req.params.id } }).then(function() {
+    res.redirect('/user/' + req.params.id);
+  });
+});
 
-///////////////////////////////////////////////////////////////////////////////
-//                            TESTING                                       //
-///////////////////////////////////////////////////////////////////////////////
+router.delete('/:id', function(req, res, next) {
+  models.Users.destroy({
+    where: { id: req.params.id }
+  }).then(function(user) {
+    res.redirect('/user');
+  });
+});
 
 module.exports = router;
