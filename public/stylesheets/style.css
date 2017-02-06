@@ -16,12 +16,15 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
+<<<<<<< HEAD
     html body nav.uk-navbar-transparent {
       margin-bottom: -100%; }
       html body nav.uk-navbar-transparent a {
         color: rgba(255, 255, 255, 0.7); }
         html body nav.uk-navbar-transparent a:hover {
           color: #fff; }
+=======
+>>>>>>> e51e61ef5fb769ccd86f643cf747eee232488b05
     html body .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 120px 10% 0;

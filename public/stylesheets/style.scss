@@ -34,6 +34,7 @@ html {
     color         : $primary-color;
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
+<<<<<<< HEAD
     nav.uk-navbar-transparent {
       margin-bottom: -100%;
 
@@ -45,6 +46,11 @@ html {
         }
       }
     }
+=======
+    // nav {
+    //   margin-bottom: -100%;
+    // }
+>>>>>>> e51e61ef5fb769ccd86f643cf747eee232488b05
 
     .main-profile-card {
       background: $green-gradient;
