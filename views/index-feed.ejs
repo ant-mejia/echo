@@ -8,7 +8,7 @@
             <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
                 <% messages.forEach((item) => { %>
-                    <p><%= item.content %></p>
+                    <p><a href="<%= '/Messages.originId' %>" style="color: inherit; text-decoration:none;"><%= item.content %></a></p>
                 <% }) %>
                 <div>
                   <button class="uk-button uk-button-default uk-toggle" type="button" uk-toggle="target: #add-message">Add</button>
