@@ -1,31 +1,19 @@
 <ul class="uk-list" id="message-list">
   <% messages.forEach((item) => { %>
-    <li class="message">
+      <li class="messasge">
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <span class="title">
           <a href="message/show">
           <%= item.content %>
           </a>
         </span>
-        <p>@
-          <%= item.originId %>
-        </p>
-=======
-        <span class="title"><a href="message/show"><%= item.content %></a></span>
-        <p><span class="sender ">@<%= item.originId %><span class="">Today</span></p>
->>>>>>> cd54c9f499c57aad4eea37ff02c245d32e999c66
-=======
-        <span class="title"><a href="message/show"><%= item.content %></a></span>
-        <p><span class="sender ">@<%= item.originId %><span class="">Today</span></p>
->>>>>>> 5341d33659a463c503239e1398670e29a8bcdba7
+        <p>@<%= item.originId %></p>
       </div>
       <form class="new-comment" action="/" method="post">
         <input class="uk-input uk-form-blank uk-text-success uk-form-width-small db" type="text" name="content" placeholder="Reply to Status">
         <button class="uk-button uk-button-primary uk-button-small" type="submit">Reply</button>
       </form>
-    </li>
-    <% }) %>
+  </li>
+  <% }) %>
 
 </ul>
