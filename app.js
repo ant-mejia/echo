@@ -16,7 +16,6 @@ var session = require('express-session');
 //added routes
 var authRoutes = require('./routes/auth.js');
 var userRoutes = require('./routes/user.js');
-var commentRoutes = require('./routes/comments.js');
 //added for editing
 var methodOverride = require('method-override');
 
@@ -26,10 +25,6 @@ require('dotenv').config();
 //use edditing
 app.use(methodOverride('_method'));
 
-
-// add new modules and files here
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -37,37 +32,34 @@ app.set('view engine', 'ejs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(cookieParser());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: false,
   sourceMap: true
+}));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// add new express-session and passport middleware here
-// telling express to use express-session for secretKey
+// added for express-session and passport require
 app.use(session({
   secret: process.env.SECRET_KEY,
   resave: false,
-  saveUnintialized: true
-
+  saveUninitialized: true
 }));
+//not sure if i should add
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
 // app.use('/users', users);
 //ADDED USER ROUTES
-app.use('/auth', authRoutes);
+app.use('/', authRoutes);
 app.use('/user', userRoutes);
-app.use('/comments', commentRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -90,4 +82,3 @@ app.listen(port);
 console.log("Listening on port " + port);
 
 module.exports = app;
-

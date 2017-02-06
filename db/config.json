@@ -1,18 +1,13 @@
 {
   "development": {
-<<<<<<< HEAD
-=======
     "username": "alexdiaz",
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
     "password": null,
     "database": "echo",
     "host": "127.0.0.1",
     "dialect": "postgres"
-<<<<<<< HEAD
   },
   "production": {
     "use_env_variable": "DATABASE_URL"
-=======
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
+
   }
 }
