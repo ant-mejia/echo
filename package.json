@@ -1,17 +1,13 @@
 {
   "name": "echo",
   "version": "0.0.1",
-<<<<<<< HEAD
-=======
-  "private": true,
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.0",
-<<<<<<< HEAD
+
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -21,7 +17,7 @@
     "express-session": "^1.15.0",
     "fs": "0.0.1-security",
     "method-override": "^2.3.7",
-=======
+    "moment": "^2.17.1",
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
@@ -32,27 +28,20 @@
     "express-sessions": "^1.0.6",
     "i": "^0.3.5",
     "local": "^0.3.3",
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
+
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-<<<<<<< HEAD
     "path": "^0.12.7",
-=======
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
     "psql": "0.0.1",
     "sequelize": "^3.30.1",
     "sequelize-cli": "^2.5.1",
-<<<<<<< HEAD
     "serve-favicon": "^2.3.2",
     "socket.io": "^1.7.2",
     "uikit": "^3.0.0-beta.9"
-=======
-    "serve-favicon": "~2.3.2"
->>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
   }
 }
