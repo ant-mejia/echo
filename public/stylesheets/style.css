@@ -16,12 +16,24 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
-    html body nav {
+    html body nav.uk-navbar-transparent {
       margin-bottom: -100%; }
+      html body nav.uk-navbar-transparent a {
+        color: rgba(255, 255, 255, 0.7); }
+        html body nav.uk-navbar-transparent a:hover {
+          color: #fff; }
     html body .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 120px 10% 0;
       overflow: hidden; }
+      html body .main-profile-card h2.profile-name {
+        font-family: "Comfortaa", sans-serif;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 0.1em; }
+      html body .main-profile-card h4.profile-details {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7); }
     html body form#login input {
       display: block; }
     html body .main-wrapper {
