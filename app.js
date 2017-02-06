@@ -82,4 +82,3 @@ app.listen(port);
 console.log("Listening on port " + port);
 
 module.exports = app;
-//sequelize model:create --name Users --attributes "username:string(255) password:text email:string(128) firstName:string(255) lastName:string(255) rank:int"

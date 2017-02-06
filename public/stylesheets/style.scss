@@ -6,6 +6,9 @@ $secondary-bg: #e5f6f3;
 $navbg: #fbf8f4;
 $icon-color: #c0c0c0;
 $text-emphasis: #556073;
+$green: #64A6AA;
+$light-green: #91C7C1;
+$green-gradient: linear-gradient($green, $light-green);
 $lato: 'Lato', sans-serif;
 $Comfortaa: 'Comfortaa', sans-serif;
 $open-sans: 'Open Sans', sans-serif; // Styles
@@ -30,8 +33,14 @@ html {
     color         : $primary-color;
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
-    .uk-navbar-container:not(.uk-navbar-transparent) {
-      background-color: opacify($navbg, 0.3);
+    nav {
+      margin-bottom: -100%;
+    }
+
+    .main-profile-card {
+      background: $green-gradient;
+      padding   : 120px 10% 0;
+      overflow  : hidden;
     }
 
     form#login {
@@ -50,6 +59,8 @@ html {
       font-family: $Comfortaa;
 
       li {
+        margin-bottom: 3em;
+
         div {
           padding: 0 40px;
 
@@ -78,5 +89,10 @@ html {
         /* or whatever color you prefer */
       }
     }
+  }
+
+  footer {
+    margin-top: 50%;
+    padding   : 50px;
   }
 }
