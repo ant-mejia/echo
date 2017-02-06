@@ -2,6 +2,8 @@
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 $main-bg: #fbf8f4;
+$secondary-bg: #e5f6f3;
+$navbg: #fbf8f4;
 $lato: 'Lato', serif;
 $open-sans: 'Open Sans', sans-serif; // Styles
 
@@ -16,13 +18,17 @@ html {
       font-weight: 200;
       font-family: $lato;
     }
-    display         : flex;
-    min-height      : 100%;
-    flex-direction  : column;
-    font-family     : $lato;
-    font-weight     : normal;
-    color           : $primary-color;
-    background-color: $main-bg;
+    display       : flex;
+    min-height    : 100%;
+    flex-direction: column;
+    font-family   : $lato;
+    font-weight   : normal;
+    color         : $primary-color;
+    background    : linear-gradient($secondary-bg, $main-bg -20%);
+
+    .uk-navbar-container:not(.uk-navbar-transparent) {
+      background-color: opacify($navbg, 0.3);
+    }
 
     form#login {
       input {

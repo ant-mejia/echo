@@ -25,7 +25,9 @@ router.post('/register', (req, res, next)  => {
 
 //auth login
 router.get('/login', authHelpers.loginRedirect, (req, res)=> {
-  res.render('auth/login');
+  res.render('auth/login', {
+    title: 'title'
+  });
 });
 
 router.post('/login', passport.authenticate('local', {

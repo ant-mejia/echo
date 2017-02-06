@@ -9,7 +9,7 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
     models.Messages.findAll({}).then(function(msg) {
       res.render('index-feed', {
-        title: 'Directors',
+        title: req.user.username,
         messages: msg
       });
     });
