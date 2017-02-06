@@ -1,5 +1,6 @@
 {
   "development": {
+    "username": "alexdiaz",
     "password": null,
     "database": "echo",
     "host": "127.0.0.1",
@@ -7,5 +8,6 @@
   },
   "production": {
     "use_env_variable": "DATABASE_URL"
+
   }
 }
