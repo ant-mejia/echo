@@ -1,6 +1,11 @@
-<ul class="uk-list">
+<ul class="uk-list" id="message-list">
   <% messages.forEach((item) => { %>
-      <li><%= item.content %></li>
+      <li class="messasge">
+      <div>
+        <span class="title"><%= item.content %></span>
+        <p>@<%= item.originId %></p>
+      </div>
+      </li>
   <% }) %>
 
 </ul>
