@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var authHelpers = require('../auth/auth-helpers');
+const bcrypt = require('bcryptjs');
+
 
 //added to for user
 var models = require('../db/models/index');
@@ -64,15 +66,29 @@ router.get('/:id/edit', function(req, res, next) {
 //edit allow the edit to work and redirects user to info page
 //NOT WORKING
 router.put('/:id', function(req, res, next) {
+  const salt = bcrypt.genSaltSync();
+  const hash = bcrypt.hashSync(req.body.password, salt);
    models.Users.update({
-     password: req.body.password,
+     password: hash,
      email: req.body.email,
      firstName: req.body.firstName,
      lastName: req.body.lastName
    }, { where: { id: req.params.id } }).then(function() {
-     res.redirect('/user/' + req.params.id);
+     res.redirect('/');
    });
  });
+
+ //posts to database?
+  //  router.post('/', function(req, res, next) {
+  //   models.Users.create({
+  //     password: req.body.password,
+  //     email: req.body.email,
+  //     firstName: req.body.firstName,
+  //     lastName: req.body.lastName
+  //   }).then(function(){
+  //     res.redirect('/user/')
+  //   })
+  // });
 
 ///////////////////////////////////////////////////////////////////////////////
 //                            TESTING                                       //
