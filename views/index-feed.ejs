@@ -7,9 +7,7 @@
         <div class="main-wrapper">
             <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
-                <% messages.forEach((item) => { %>
-                    <p><%= item.content %></p>
-                <% }) %>
+                <% include partials/message-feed %>
                 <div>
                   <button class="uk-button uk-button-default uk-toggle" type="button" uk-toggle="target: #add-message">Add</button>
                   <div id="add-message">

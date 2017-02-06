@@ -8,13 +8,15 @@ html {
     font-family: "Lato", serif;
     font-weight: normal;
     color: #333;
-    background-color: #fbf8f4; }
+    background: linear-gradient(#e5f6f3, #fbf8f4 -20%); }
     html body h1,
     html body h2,
     html body h3,
     html body h4 {
       font-weight: 200;
       font-family: "Lato", serif; }
+    html body .uk-navbar-container:not(.uk-navbar-transparent) {
+      background-color: #fbf8f4; }
     html body form#login input {
       display: block; }
     html body .main-wrapper {
