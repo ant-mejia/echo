@@ -7,10 +7,10 @@ const models = require('../db/models/index');
 /* GET home page. */
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
-    models.Messages.findAll({}).then(function(msg) {
+    models.Messages.findAll({}).then(function(msgs) {
       res.render('index-feed', {
         title: req.user.username,
-        messages: msg
+        messages: msgs
       });
     });
   } else {

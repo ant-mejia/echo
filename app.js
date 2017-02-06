@@ -58,7 +58,7 @@ app.use(passport.session());
 app.use('/', index);
 // app.use('/users', users);
 //ADDED USER ROUTES
-app.use('/auth', authRoutes);
+app.use('/', authRoutes);
 app.use('/user', userRoutes);
 
 // catch 404 and forward to error handler
