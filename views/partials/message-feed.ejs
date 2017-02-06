@@ -2,6 +2,7 @@
   <% messages.forEach((item) => { %>
     <li class="message">
       <div>
+<<<<<<< HEAD
         <span class="title">
           <a href="message/show">
           <%= item.content %>
@@ -10,6 +11,10 @@
         <p>@
           <%= item.originId %>
         </p>
+=======
+        <span class="title"><a href="message/show"><%= item.content %></a></span>
+        <p><span class="sender ">@<%= item.originId %><span class="">Today</span></p>
+>>>>>>> cd54c9f499c57aad4eea37ff02c245d32e999c66
       </div>
       <form class="new-comment" action="/" method="post">
         <input class="uk-input uk-form-blank uk-text-success uk-form-width-small db" type="text" name="content" placeholder="Reply to Status">
