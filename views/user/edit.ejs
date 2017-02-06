@@ -60,11 +60,13 @@
       <p><input class="waves-effect waves-light btn" type="submit" value="Save" /></p>
       </div>
       </div>
+
+      <form action="<%= '/user/' + user.id + '?_method=DELETE' %>" method="POST">
+      <input class="waves-effect waves-light btn" type="submit" value="Delete user" />
+      </form>
+      
     </form>
 
-    <form action="<%= '/user/' + user.id + '?_method=DELETE' %>" method="POST">
-    <input class="waves-effect waves-light btn" type="submit" value="Delete user" />
-    </form>
 
   </div>
 </div>
