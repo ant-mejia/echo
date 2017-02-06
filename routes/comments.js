@@ -5,25 +5,23 @@ const msg = require('../msgs/msg');
 const models = require('../db/models/index');
 
 
-router.get('/new', function(req, res, next) {
-  res.render('msg/new');
+/* GET home page. */
+router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
+  if (req.user) {
+    models.Comments.findAll({}).then(function(comment) {
+      res.render('comment-feed', {
+        title: req.user.username,
+        comments: comment
+      });
+    });
+  } else {
+    res.render('index', { title: 'Express' });
+  }
 });
 
-router.post('/', function(req, res, next) {
-  models.Comments.create({
-      content: req.body.content
-  }).then(function() {
-    res.redirect('user/show')
-  });
-});
-
-router.get('/:id', function(req, res, next) {
-models.Comments.findById(req.params.id).then(function(message) {
-  res.render('comments/show', {
-    senderId: senderId,
-    content: content
-  });
-});
+router.post('/', authHelpers.loginRequired, (req, res, next) => {
+  comment.create(req,res);
+  res.redirect('/');
 });
 
 
