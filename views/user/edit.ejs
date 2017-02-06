@@ -1,3 +1,23 @@
-<body>
-  hey i work
-</body>
+<form action="<%= '/user/' + user.id + '?_method=PUT' %>" method="POST">
+  <label>
+    Change Password
+    <input class="uk-input uk-form-blank uk-form-width-medium" type='password' name='password' value="<%= user.password %>" />
+  </label>
+
+  <label>
+    Change First Name
+    <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='firstName' value="<%= user.firstName %>" />
+  </label>
+
+  <label>
+    Change Last Name
+    <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='lastName' value="<%= user.lastName %>" />
+  </label>
+
+  <label>
+    Change Email
+    <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='email' value="<%= user.email %>" />
+  </label>
+<input type="submit" />
+
+</form>

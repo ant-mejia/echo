@@ -61,6 +61,19 @@ router.get('/:id/edit', function(req, res, next) {
   });
 });
 
+//edit allow the edit to work and redirects user to info page
+//NOT WORKING
+router.put('/:id', function(req, res, next) {
+   models.Users.update({
+     password: req.body.password,
+     email: req.body.email,
+     firstName: req.body.firstName,
+     lastName: req.body.lastName
+   }, { where: { id: req.params.id } }).then(function() {
+     res.redirect('/user/' + req.params.id);
+   });
+ });
+
 ///////////////////////////////////////////////////////////////////////////////
 //                            TESTING                                       //
 ///////////////////////////////////////////////////////////////////////////////
