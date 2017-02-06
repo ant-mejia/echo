@@ -21,6 +21,7 @@
     "express-session": "^1.15.0",
     "fs": "0.0.1-security",
     "method-override": "^2.3.7",
+<<<<<<< HEAD
 =======
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
@@ -33,6 +34,9 @@
     "i": "^0.3.5",
     "local": "^0.3.3",
 >>>>>>> b7f7312315e069c4a536ca48dc05196b3cf3476b
+=======
+    "moment": "^2.17.1",
+>>>>>>> 949d424ee32de5cc95ae0a7fe266617e1cc38755
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
     "nodemon": "^1.11.0",
