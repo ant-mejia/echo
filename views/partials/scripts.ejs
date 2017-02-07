@@ -21,5 +21,28 @@ $(document).ready(function() {
       $(".uk-navbar-container").addClass("uk-navbar-transparent").removeClass("uk-navbar-opaque");
     }
   });
+
+
+
+    $('.likeButton').on('click', function(){
+
+      if($(this).hasClass('liked')){ //already liked
+
+        $(this).removeClass('liked');
+        $(this).addClass('unlike');
+        $(this).text('smash that like');
+
+      } else { //not liked
+
+        $(this).removeClass('unlike');
+        $(this).addClass('liked');
+        $(this).text('already liked');
+      }
+    });
+
+
+
+
+
 });
 </script>
