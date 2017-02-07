@@ -8,6 +8,7 @@ $icon-color: #c0c0c0;
 $text-emphasis: #556073;
 $green: #64A6AA;
 $light-green: #91C7C1;
+$light-text: rgba(255,255,255,.7);
 $green-gradient: linear-gradient($green, $light-green);
 $lato: 'Lato', sans-serif;
 $Comfortaa: 'Comfortaa', sans-serif;
@@ -33,67 +34,81 @@ html {
     color         : $primary-color;
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
-    nav.uk-navbar-transparent {
+    header {
       nav {
         margin-bottom: -100%;
       }
+    }
 
-      .main-profile-card {
-        background: $green-gradient;
-        padding   : 120px 10% 0;
-        overflow  : hidden;
+    .main-profile-card {
+      background    : $green-gradient;
+      padding       : 110px 10%;
+      margin-top    : -110px;
+      overflow      : hidden;
+      letter-spacing: 0.1em;
+
+      h2.profile-name {
+        font-family  : $Comfortaa;
+        margin-bottom: 0;
+        color        : $light-text;
       }
 
-      form#login {
-        input {
-          display: block;
-        }
+      h4.profile-details {
+        margin: 0;
+        color : $light-text;
       }
+    }
 
-      .main-wrapper {
-        flex: 1;
+    form#login {
+      input {
+        display: block;
       }
+    }
 
-      ul#message-list {
-        padding    : 0;
-        margin     : 0;
-        font-family: $Comfortaa;
+    .main-wrapper {
+      flex       : 1;
+      padding-top: 110px;
+    }
 
-        li {
-          margin-bottom: 3em;
+    ul#message-list {
+      padding    : 0;
+      margin     : 0;
+      font-family: $Comfortaa;
 
-          div {
-            padding: 0 40px;
+      li {
+        margin-bottom: 3em;
 
-            p {
-              font-weight: 400;
-              margin     : 0;
-              color      : $icon-color;
-            }
+        div {
+          padding: 0 40px;
 
-            span.title {
-              color    : $text-emphasis;
-              font-size: 1.3em;
-            }
+          p {
+            font-weight: 400;
+            margin     : 0;
+            color      : $icon-color;
+          }
+
+          span.title {
+            color    : $text-emphasis;
+            font-size: 1.3em;
           }
         }
+      }
 
-        li span.title::before {
-          content         : " ";
-          width           : 7px;
-          height          : 7px;
-          border-radius   : 100%;
-          background-color: $icon-color;
-          display         : inline-block;
-          margin-left     : -37px;
-          margin-right    : 30px;
-        }
+      li span.title::before {
+        content         : " ";
+        width           : 7px;
+        height          : 7px;
+        border-radius   : 100%;
+        background-color: $icon-color;
+        display         : inline-block;
+        margin-left     : -37px;
+        margin-right    : 30px;
       }
     }
+  }
 
-    footer {
-      margin-top: 50%;
-      padding   : 50px;
-    }
+  footer {
+    margin-top: 50%;
+    padding   : 50px;
   }
 }
