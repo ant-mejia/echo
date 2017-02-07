@@ -16,44 +16,32 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    html body nav.uk-navbar-transparent {
+    html body nav.uk-navbar-transparent nav {
       margin-bottom: -100%; }
-      html body nav.uk-navbar-transparent a {
-        color: rgba(255, 255, 255, 0.7); }
-        html body nav.uk-navbar-transparent a:hover {
-          color: #fff; }
-=======
->>>>>>> e51e61ef5fb769ccd86f643cf747eee232488b05
-=======
-    html body nav {
-      margin-bottom: -100%; }
->>>>>>> parent of b8a72d1... Added moment.js
-    html body .main-profile-card {
+    html body nav.uk-navbar-transparent .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 120px 10% 0;
       overflow: hidden; }
-    html body form#login input {
+    html body nav.uk-navbar-transparent form#login input {
       display: block; }
-    html body .main-wrapper {
+    html body nav.uk-navbar-transparent .main-wrapper {
       flex: 1; }
-    html body ul#message-list {
+    html body nav.uk-navbar-transparent ul#message-list {
       padding: 0;
       margin: 0;
       font-family: "Comfortaa", sans-serif; }
-      html body ul#message-list li {
+      html body nav.uk-navbar-transparent ul#message-list li {
         margin-bottom: 3em; }
-        html body ul#message-list li div {
+        html body nav.uk-navbar-transparent ul#message-list li div {
           padding: 0 40px; }
-          html body ul#message-list li div p {
+          html body nav.uk-navbar-transparent ul#message-list li div p {
             font-weight: 400;
             margin: 0;
             color: #c0c0c0; }
-          html body ul#message-list li div span.title {
+          html body nav.uk-navbar-transparent ul#message-list li div span.title {
             color: #556073;
             font-size: 1.3em; }
-      html body ul#message-list li span.title::before {
+      html body nav.uk-navbar-transparent ul#message-list li span.title::before {
         content: " ";
         width: 7px;
         height: 7px;
@@ -61,10 +49,9 @@ html {
         background-color: #c0c0c0;
         display: inline-block;
         margin-left: -37px;
-        margin-right: 30px;
-        /* or whatever color you prefer */ }
-  html footer {
-    margin-top: 50%;
-    padding: 50px; }
+        margin-right: 30px; }
+    html body footer {
+      margin-top: 50%;
+      padding: 50px; }
 
 /*# sourceMappingURL=style.css.map */
