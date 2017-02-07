@@ -67,7 +67,6 @@ app.use('/', authRoutes);
 app.use('/user', userRoutes);
 app.use('/comments', commentsRoutes);
 app.use('/messages', messageRoutes);
->>>>>>> 60829471efc26eaf715f75930796889af135f94f
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
