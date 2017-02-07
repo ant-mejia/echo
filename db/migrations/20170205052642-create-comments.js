@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       originMsg: {
-        foreigKey: true,
+        foreignKey: true,
         type: Sequelize.INTEGER
       },
       senderId: {
