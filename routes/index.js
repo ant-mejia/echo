@@ -5,6 +5,11 @@ const msg = require('../msgs/msg');
 const models = require('../db/models/index');
 const moment = require('moment');
 
+function rank(num) {
+  num = num < 1 ? 1 : num;
+  console.log(num);
+  return Math.floor((num / (Math.sqrt(num))) / Math.E) + 1;
+}
 /* GET home page. */
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
@@ -15,7 +20,7 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
         title: req.user.username,
         user: req.user,
         joinDate: moment(req.user.createdAt).fromNow(),
-        level: 10,
+        level: rank(req.user.rank),
         messages: msgs,
         moment: moment
       });

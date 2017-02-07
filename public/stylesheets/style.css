@@ -16,8 +16,35 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
-    html body header nav {
-      margin-bottom: -100%; }
+    html body header.main-header .uk-navbar-toggle-icon {
+      margin-right: 30px;
+      color: rgba(255, 255, 255, 0.7); }
+    html body header.main-header nav.uk-navbar-container {
+      margin-bottom: -100%;
+      transition: all 0.2s linear; }
+      html body header.main-header nav.uk-navbar-container .uk-logo {
+        color: rgba(255, 255, 255, 0.7); }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        display: block;
+        margin: 20px auto -20px;
+        background-color: trasparent;
+        transition: all 0.3s linear; }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text:hover::before {
+        background-color: rgba(255, 255, 255, 0.7); }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text a {
+        color: rgba(255, 255, 255, 0.7); }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text.active a {
+        color: #fff; }
+      html body header.main-header nav.uk-navbar-container.uk-navbar-opaque {
+        background: #fbf8f4; }
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque .uk-logo,
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque .uk-navbar-toggle-icon,
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque ul.uk-navbar-nav li.light-text a {
+          color: #64A6AA; }
     html body .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 110px 10%;
@@ -36,6 +63,13 @@ html {
     html body .main-wrapper {
       flex: 1;
       padding-top: 110px; }
+      html body .main-wrapper .transition-border {
+        height: 4em;
+        width: 100%;
+        margin-top: -4em;
+        background-image: url("/images/circles.png");
+        background-repeat: repeat-x;
+        background-size: cover; }
     html body ul#message-list {
       padding: 0;
       margin: 0;

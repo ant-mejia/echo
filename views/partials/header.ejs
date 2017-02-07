@@ -1,12 +1,25 @@
-<header uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
+<header class="main-header" uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
   <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-      <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="/">Logo</a>
-          <ul class="uk-navbar-nav">
-              <li class="uk-active"><a href="#">Active</a></li>
-              <li><a href="#">Parent</a></li>
-              <li><a href="#">Item</a></li>
+    <a class="uk-navbar-item uk-logo" href="/">Echo</a>
+      <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav uk-visible@m">
+              <li class="uk-active light-text"><a href="#">Profile</a></li>
+              <li class="light-text"><a href="#">Parent</a></li>
+              <li class="light-text"><a href="#">Item</a></li>
           </ul>
+          <span class="uk-navbar-toggle-icon uk-hidden@m" href="#mobile-menu" uk-toggle uk-icon="{icon: check}"></span>
+          <div id="mobile-menu" class="uk-modal-full" uk-modal>
+            <div class="uk-modal-dialog uk-height-viewport uk-flex-row uk-flex-middle uk-flex-center">
+              <button class="uk-modal-close-full" type="button" uk-close></button>
+              <div>
+                <div class="uk-padding-large">
+                  <h1 class="uk-text-center">Hello World</h1>
+                  <h1>Hello World</h1>
+                  <h1>Hello World</h1>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
   </nav>
 </header>
