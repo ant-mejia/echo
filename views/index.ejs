@@ -3,16 +3,20 @@
 
 <% include partials/head %>
 
-<body class='<%= title %>'>
+  <body class='<%= title %>'>
     <% include partials/header %>
-    <div class="main-wrapper">
+      <div class="main-wrapper">
         <div class="uk-container">
           <h1>index page</h1>
-          <a href='/register'>Register</a>
-          <a href='/login'>Sign In</a>
+            <a href='/register'>
+            <button class="uk-button uk-button-primary" type="submit">Register</button>
+            </a>
+            <a href='/login'>
+            <button class="uk-button uk-button-primary" type="submit">Sign In</button>
+          </a>
         </div>
-    </div>
+      </div>
     <% include partials/footer %>
-</body>
+  </body>
 
 </html>

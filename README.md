@@ -56,6 +56,13 @@ for developing fast and powerful web interfaces.
 
 * [Heroku](https://devcenter.heroku.com/) - Heroku lets you deploy, run and manage applications written in Ruby, Node.js, Java, Python, Clojure, Scala, Go and PHP.
 
+## Wireframe
+
+* [Echo_wireframe](https://github.com/ant-mejia/echo/blob/reply/public/Echo%20App.pdf) -
+* [ZenHub](https://www.zenhub.com/) - ZenHub tracks work where the work actually happens – GitHub. Managers get deeper insights and developers stay focused in the environment they know and love.
+* [Project's ZenHub](https://github.com/ant-mejia/echo/blob/master/views/user/edit.ejs#boards)
+
+
 ## Built With
 
 * [Expressjs](http://expressjs.com/) - The node js framework used

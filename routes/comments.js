@@ -1,17 +1,18 @@
 var express = require('express');
 var router = express.Router();
 const authHelpers = require('../auth/auth-helpers');
-const msg = require('../msgs/msg');
+const comment = require('../msgs/comment');
 const models = require('../db/models/index');
 
 
 /* GET home page. */
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
-    models.Comments.findAll({}).then(function(comment) {
+    models.Comments.findById(req.params.id).then(function(comment) {
       console.log(comment)
-      res.render('comment-feed', {
+      res.render('messages/show', {
         title: req.user.username,
+        content: content,
         comments: comment
       });
     });
