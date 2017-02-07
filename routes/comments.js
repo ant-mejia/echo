@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const authHelpers = require('../auth/auth-helpers');
-const msg = require('../msgs/msg');
+const comment = require('../msgs/comment');
 const models = require('../db/models/index');
 
 
