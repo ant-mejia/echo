@@ -22,12 +22,14 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
 
 router.post('/', authHelpers.loginRequired, (req, res, next) => {
   // console.log('comment');
+  // console.log(req.user.id)
   console.log(req.body)
   let newId;
   models.Comments.create({
     originMsg: req.body.originMessage,
     content: req.body.content,
-    location: req.body.location}).then( response => newId = response.dataValues.id );
+    location: req.body.location
+  }).then( response => newId = response.dataValues.id );
   res.redirect('/');
 });
 
