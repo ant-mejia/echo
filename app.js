@@ -17,11 +17,8 @@ var session = require('express-session');
 //added routes
 var authRoutes = require('./routes/auth.js');
 var userRoutes = require('./routes/user.js');
-<<<<<<< HEAD
 var commentsRoutes = require('./routes/comments.js');
-=======
 var messageRoutes = require('./routes/message.js');
->>>>>>> 60829471efc26eaf715f75930796889af135f94f
 //added for editing
 var methodOverride = require('method-override');
 
@@ -68,9 +65,7 @@ app.use('/', index);
 //ADDED USER ROUTES
 app.use('/', authRoutes);
 app.use('/user', userRoutes);
-<<<<<<< HEAD
 app.use('/comments', commentsRoutes);
-=======
 app.use('/messages', messageRoutes);
 >>>>>>> 60829471efc26eaf715f75930796889af135f94f
 
