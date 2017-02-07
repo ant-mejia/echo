@@ -8,7 +8,9 @@ const moment = require('moment');
 /* GET home page. */
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
-    models.Messages.findAll({}).then(function(msgs) {
+    models.Messages.findAll({
+      order: [['createdAt', 'DESC']]
+    }).then(function(msgs) {
       res.render('index-feed', {
         title: req.user.username,
         user: req.user,
