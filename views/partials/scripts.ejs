@@ -1,13 +1,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.9/js/uikit.min.js"></script>
 <script type="text/javascript">
-// Passing a selector and an options object.
-var stickys = UIkit.sticky('.sticky', {
-  offset: 50,
-  top: 100
-});
+$(document).ready(function() {
+  // Passing a selector and an options object.
+  var stickys = UIkit.sticky('.sticky', {
+    offset: 50,
+    top: 100
+  });
 
-// Functional components should omit the 'element' argument.
-var navbar = UIkit.navbar('nav');
-var toggle = UIkit.toggle('.uk-toggle',{});
+  // Functional components should omit the 'element' argument.
+  var navbar = UIkit.navbar('nav');
+  var toggle = UIkit.toggle('.uk-toggle',{});
+
+  $('.main-profile-card').on('show', function () {
+    alert('yo!');
+  });
+});
 </script>
