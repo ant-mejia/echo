@@ -58,6 +58,7 @@ for developing fast and powerful web interfaces.
 
 ## Wireframe
 
+* [Echo_wireframe](https://github.com/ant-mejia/echo/blob/reply/public/Echo%20App.pdf) -
 * [ZenHub](https://www.zenhub.com/) - ZenHub tracks work where the work actually happens – GitHub. Managers get deeper insights and developers stay focused in the environment they know and love.
 * [Project's ZenHub](https://github.com/ant-mejia/echo/blob/master/views/user/edit.ejs#boards)
 
