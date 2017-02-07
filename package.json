@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.0",
-
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
@@ -28,7 +27,6 @@
     "express-sessions": "^1.0.6",
     "i": "^0.3.5",
     "local": "^0.3.3",
-
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
     "nodemon": "^1.11.0",
