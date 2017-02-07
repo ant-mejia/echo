@@ -5,7 +5,8 @@
     <% include ../partials/header %>
       <div class='main-wrapper'>
         <div class="uk-container">
-          <h1>You are now signed in</h1>
+          <h1 style="display:flex; justify-content:center;">You are now signed in as:</h1>
+          <h1 style="display:flex; justify-content:center;"><%= user.username %></h1>
         </div>
       </div>
       <a href="<%= `/user/${user.id}/edit` %>">Edit Profile</a>

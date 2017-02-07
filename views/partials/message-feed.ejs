@@ -1,14 +1,19 @@
-<ul class="uk-list" id="message-list">
+<ul class="uk-list" id="message-list" style="list-style-type: none;">
   <% messages.forEach((item) => { %>
-    <li class="message">
+    <li class="message" style="list-style-type: none;">
       <div>
-        <span class="title"><a class="uk-link-reset" href="message/show"><%= item.content %></a></span>
+        <span class="title"><a href="<%= '/messages/' + item.id %>"><%= item.content %></a></span>
         <p><span class="sender ">@<%= item.originId %><span class="">Today</span></p>
       </div>
       <form class="new-comment" action="/" method="post">
         <input class="uk-input uk-form-blank uk-text-success uk-form-width-small db" type="text" name="content" placeholder="Reply to Status">
         <button class="uk-button uk-button-primary uk-button-small" type="submit">Reply</button>
       </form>
+      <% if(user.username === item.originId){ %>
+      <form action="<%= '/messages/' + item.id + '?_method=DELETE' %>" method="POST">
+        <button class="uk-button uk-button-primary uk-button-small" type="submit" value="X"> Delete </button>
+      </form>
+    <%  } %>
     </li>
   <% }) %>
 </ul>
