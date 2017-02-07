@@ -13,8 +13,13 @@ $(document).ready(function() {
   var navbar = UIkit.navbar('nav');
   var toggle = UIkit.toggle('.uk-toggle',{});
 
-  $('.main-profile-card').on('show', function () {
-    alert('yo!');
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $(".main-profile-card").height() - $(".uk-navbar-container").height()) {
+      $(".uk-navbar-container").addClass("uk-navbar-opaque").removeClass("uk-navbar-transparent");
+    } else {
+      $(".uk-navbar-container").addClass("uk-navbar-transparent").removeClass("uk-navbar-opaque");
+    }
   });
 });
 </script>
