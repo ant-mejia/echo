@@ -14,7 +14,8 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
         user: req.user,
         joinDate: moment(req.user.createdAt).fromNow(),
         level: 10,
-        messages: msgs
+        messages: msgs,
+        moment: moment
       });
     });
   } else {
