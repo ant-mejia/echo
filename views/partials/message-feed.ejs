@@ -2,7 +2,7 @@
   <% messages.forEach((item) => { %>
     <li class="message" style="list-style-type: none;">
       <div>
-        <span class="title"><a href="<%= '/messages/' + item.id %>"><%= item.content %></a></span>
+        <span class="title"><a class="uk-link-reset" href="<%= '/messages/' + item.id %>"><%= item.content %></a></span>
         <p><span class="sender ">@<%= item.originId %><span class=""><%= moment(item.createdAt).fromNow()%></span></p>
       </div>
       <form class="new-comment" action="/comments" method="post">
