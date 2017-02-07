@@ -24,47 +24,43 @@
       <div class="row">
       <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id"icon_prefix" type="text" name="name" value="<%= user.firstname %>" />
-          <label clas="active"></label>
+          <input id"icon_prefix" type="text" name="firstName" value="<%= user.firstname %>" />
+          <label class="active"></label>
       </div>
       </div>
 
       <div class="row">
       <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
-          <input id"icon_prefix" type="text" name="name" value="<%= user.lastname %>" />
-          <label clas="active"></label>
+          <input id"icon_prefix" type="text" name="lastName" value="<%= user.lastname %>" />
+          <label class="active"></label>
       </div>
       </div>
 
       <div class="row">
       <div class="input-field col s6">
           <i class="material-icons prefix">vpn_key</i>
-          <input id"icon_prefix" type="text" name="name" value="<%= user.password %>" />
-          <label clas="active"></label>
+          <input id"icon_prefix" type="text" name="password" value="<%= user.password %>" />
+          <label class="active"></label>
       </div>
       </div>
 
       <div class="row">
       <div class="input-field col s6">
           <i class="material-icons prefix">email</i>
-          <input id"icon_prefix" type="text" name="name" value="<%= user.email %>" />
-          <label clas="active"></label>
+          <input id"icon_prefix" type="text" name="email" value="<%= user.email %>" />
+          <label class="active"></label>
       </div>
       </div>
 
 
       <div class="row">
       <div class="input-field col s8">
-      <a href="<%= '/user/' + user.id %>" class="waves-effect waves-light btn">Cancel</a>
+      <a href="<%= '/user/' %>" class="waves-effect waves-light btn">Cancel</a>
       <p><input class="waves-effect waves-light btn" type="submit" value="Save" /></p>
       </div>
       </div>
 
-      <form action="<%= '/user/' + user.id + '?_method=DELETE' %>" method="POST">
-      <input class="waves-effect waves-light btn" type="submit" value="Delete user" />
-      </form>
-      
     </form>
 
 

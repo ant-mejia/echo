@@ -6,20 +6,29 @@ const models = require('../db/models/index');
 
 
 //get the messages by id
+//we are not using this route YET DONT DELETE!!!!!!!
+// this is the route for /id (show whatever)
 router.get('/:id', function(req, res, next) {
 models.Messages.findById(req.params.id).then(function(message) {
   res.render('message/show', {
     title: 'message',
-    messages: msg
+    message: message,
+    currentUser: req.user.username || 'TEST'
   });
 });
 });
 
-//not working yet
-router.get('/:id', function(req, res, next) {
-  models.Messages.findById(req.params.id).then(function(Message) {
-    res.render('message/show', { message: message });
-  });
+//delete route, id allows you to delete the messages
+router.delete('/:id', function(req, res, next) {
+ models.Messages.destroy({
+   where:{
+     id: req.params.id,
+     //protects owner from deletes from other users, go to line 15 in message-feed.ejs to see conditional
+     originId: req.user.username
+   }
+ }).then(function(message){
+   res.redirect('/');
+ });
 });
 
 module.exports = router;

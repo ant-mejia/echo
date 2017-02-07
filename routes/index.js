@@ -10,7 +10,9 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
     models.Messages.findAll({}).then(function(msgs) {
       res.render('index-feed', {
         title: req.user.username,
-        messages: msgs
+        messages: msgs,
+        //this allows me to make the if statement to delete in views/message-feed.ejs, if this is not put then I would not be able to call the req.user.username
+        currentUser: req.user.username
       });
     });
   } else {

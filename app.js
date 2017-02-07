@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var port = 3200;
 
+
 var index = require('./routes/index');
 
 //trouble had my routes named as users instead of user
@@ -16,6 +17,7 @@ var session = require('express-session');
 //added routes
 var authRoutes = require('./routes/auth.js');
 var userRoutes = require('./routes/user.js');
+var messageRoutes = require('./routes/message.js');
 //added for editing
 var methodOverride = require('method-override');
 
@@ -60,6 +62,7 @@ app.use('/', index);
 //ADDED USER ROUTES
 app.use('/', authRoutes);
 app.use('/user', userRoutes);
+app.use('/messages', messageRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
