@@ -6,8 +6,10 @@
       <% include partials/header %>
         <div class="main-wrapper">
           <div class="main-profile-card uk-height-large uk-max-height-large">
-            <div class="uk-width-large uk-align-center">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <div class="uk-width-large uk-align-center uk-text-center">
+              <h2 class="profile-name"><%= user.username %></h2>
+              <h4 class="profile-details"><%= user.username %></h4>
+              <h4 class="profile-details">Joined <%= joinDate %></h4>
             </div>
           </div>
             <div id="message-feed" class="uk-container">
