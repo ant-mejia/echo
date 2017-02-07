@@ -16,6 +16,7 @@ var session = require('express-session');
 //added routes
 var authRoutes = require('./routes/auth.js');
 var userRoutes = require('./routes/user.js');
+var commentsRoutes = require('./routes/comments.js');
 //added for editing
 var methodOverride = require('method-override');
 
@@ -60,6 +61,7 @@ app.use('/', index);
 //ADDED USER ROUTES
 app.use('/', authRoutes);
 app.use('/user', userRoutes);
+app.use('/comments', commentsRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

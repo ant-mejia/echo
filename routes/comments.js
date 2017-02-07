@@ -9,6 +9,7 @@ const models = require('../db/models/index');
 router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
   if (req.user) {
     models.Comments.findAll({}).then(function(comment) {
+      console.log(comment)
       res.render('comment-feed', {
         title: req.user.username,
         comments: comment
@@ -20,7 +21,13 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
 });
 
 router.post('/', authHelpers.loginRequired, (req, res, next) => {
-  comment.create(req,res);
+  // console.log('comment');
+  console.log(req.body)
+  let newId;
+  models.Comments.create({
+    originMsg: req.body.originMessage,
+    content: req.body.content,
+    location: req.body.location}).then( response => newId = response.dataValues.id );
   res.redirect('/');
 });
 
