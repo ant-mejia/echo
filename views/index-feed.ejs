@@ -5,13 +5,7 @@
     <body class='Feed'>
       <% include partials/header %>
         <div class="main-wrapper">
-          <div class="main-profile-card uk-height-large uk-max-height-large">
-            <div class="uk-width-large uk-align-center uk-text-center">
-              <h2 class="profile-name"><%= user.username %></h2>
-              <h4 class="profile-details"><%= user.username %></h4>
-              <h4 class="profile-details">Joined <%= joinDate %></h4>
-            </div>
-          </div>
+          <% include partials/main-profile-card %>
             <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
                 <% include partials/message-feed %>

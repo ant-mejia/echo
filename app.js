@@ -87,16 +87,3 @@ app.listen(port);
 console.log("Listening on port " + port);
 
 module.exports = app;
-
-{/* <li class="message">
-  <div>
-    <span class="title"><a href="message/show"><%= item.content %></a></span>
-    <p><span class="sender ">@<%= item.originId %><span class="">Today</span></p>
-    </div>
-  </li>
-  <% }) %>
-  <form class="new-comment" action="/" method="post">
-    <input class="uk-input uk-form-blank uk-text-success uk-form-width-small db" type="text" name="content" placeholder="Reply to Status">
-      <button class="uk-button uk-button-primary uk-button-small" type="submit">Reply</button>
-    </form>
-  </li> */}

@@ -9,14 +9,11 @@
         <input class="uk-input uk-form-blank uk-text-success uk-form-width-small db" type="text" name="content" placeholder="Reply to Status">
         <button class="uk-button uk-button-primary uk-button-small" type="submit">Reply</button>
       </form>
-
-      <% if(currentUser === item.originId){ %>
+      <% if(user.username === item.originId){ %>
       <form action="<%= '/messages/' + item.id + '?_method=DELETE' %>" method="POST">
         <button class="uk-button uk-button-primary uk-button-small" type="submit" value="X"> Delete </button>
       </form>
     <%  } %>
-
-
     </li>
   <% }) %>
 </ul>

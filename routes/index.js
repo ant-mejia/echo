@@ -1,9 +1,8 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 const authHelpers = require('../auth/auth-helpers');
 const msg = require('../msgs/msg');
 const models = require('../db/models/index');
-const humanize = require('humanize');
 const moment = require('moment');
 
 /* GET home page. */
@@ -12,11 +11,9 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
     models.Messages.findAll({}).then(function(msgs) {
       res.render('index-feed', {
         title: req.user.username,
-        messages: msgs,
-        //this allows me to make the if statement to delete in views/message-feed.ejs, if this is not put then I would not be able to call the req.user.username
-        currentUser: req.user.username,
         user: req.user,
         joinDate: moment(req.user.createdAt).fromNow(),
+        level: 10,
         messages: msgs
       });
     });
