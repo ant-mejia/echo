@@ -3,17 +3,34 @@
   <% include ../partials/head %>
   <body>
     <% include ../partials/header %>
-      <div class='container'>
+        <div class="main-wrapper">
+        <div class="uk-container">
         <h1>You have to login!</h1>
-        <div>
           <form action='/register' method='post'>
-              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='username' placeholder="username" />
-              <input class="uk-input uk-form-blank uk-form-width-medium" type='password' name='password' placeholder="password" />
-              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='firstName' placeholder="firstName" />
-              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='lastName' placeholder="lastName" />
-              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='email' placeholder="email" />
+          <div class="row">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='username' placeholder="Username" />
+              </div>
+              <div class="row">
+              <i class="fa fa-key fa-lg" aria-hidden="true"></i>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='password' name='password' placeholder="Password" />
+              </div>
+              <div class="row">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='firstName' placeholder="First Name" />
+              </div>
+              <div class="row">
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='lastName' placeholder="Last Name" />
+              </div>
+              <div class="row">
+              <i class="fa fa-envelope-open fa-lg" aria-hidden="true"></i>
+              <input class="uk-input uk-form-blank uk-form-width-medium" type='text' name='email' placeholder="Email" />
+              </div>
             <button class="uk-button uk-button-primary" type="submit">Register</button>
           </form>
+          </div>
+          </div>
         </div>
       </div>
     <% include ../partials/footer %>
