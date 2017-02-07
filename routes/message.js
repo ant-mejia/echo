@@ -6,8 +6,7 @@ const models = require('../db/models/index');
 
 
 //get the messages by id
-//we are not using this route YET DONT DELETE!!!!!!!
-// this is the route for /id (show whatever)
+//route to display the show page with the message passed in
 router.get('/:id', function(req, res, next) {
 models.Messages.findById(req.params.id).then(function(message) {
   res.render('message/show', {

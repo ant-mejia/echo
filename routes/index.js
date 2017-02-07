@@ -14,7 +14,7 @@ router.get('/', authHelpers.showFeedifUser, (req, res, next) => {
         title: req.user.username,
         messages: msgs,
         //this allows me to make the if statement to delete in views/message-feed.ejs, if this is not put then I would not be able to call the req.user.username
-        currentUser: req.user.username
+        currentUser: req.user.username,
         user: req.user,
         joinDate: moment(req.user.createdAt).fromNow(),
         messages: msgs
