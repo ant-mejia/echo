@@ -31,10 +31,10 @@ router.get('/login', authHelpers.loginRedirect, (req, res)=> {
   });
 });
 
-router.post('/login', passport.authenticate('local', {
+router.post('/login',  passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
-    failureFlash: true
+    failureFlash: false
   })
 );
 

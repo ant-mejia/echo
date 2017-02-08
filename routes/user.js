@@ -58,6 +58,19 @@ router.put('/:id', function(req, res, next) {
    });
  });
 
+ //delete route, id allows you to delete the messages
+ router.delete('/:id', function(req, res, next) {
+  models.Messages.destroy({
+    where:{
+      id: req.params.id,
+      //protects owner from deletes from other users, go to line 15 in message-feed.ejs to see conditional
+      originId: req.user.username
+    }
+  }).then(function(message){
+    res.render(`/${req.user.username}`);
+  });
+ });
+
 // deletes ACTUAL USER!
 router.delete('/:username', function(req, res, next) {
  models.Users.destroy({

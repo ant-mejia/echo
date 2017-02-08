@@ -60,9 +60,9 @@ app.use(passport.session());
 
 app.use('/', index);
 // app.use('/users', users);
-// //ADDED USER ROUTES
-// app.use('/', authRoutes);
-// app.use('/', userRoutes);
+//ADDED USER ROUTES
+app.use('/', authRoutes);
+app.use('/', userRoutes);
 app.use('/comments', commentsRoutes);
 app.use('/m', messageRoutes);
 

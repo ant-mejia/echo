@@ -15,6 +15,9 @@
                 <div>
                   <p><%= item.dataValues.content %></p>
                   <p>Sent <%= moment(item.dataValues.createdAt).fromNow() %></p>
+                  <form action="/<%= item.id%>" method="DELETE">
+                    <button class="uk-button uk-button-default rounded-button" type="submit">Delete</button>
+                  </form>
                 </div>
               </li>
             <% }) %>
