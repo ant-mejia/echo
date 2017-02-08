@@ -214,8 +214,9 @@ html {
       }
 
       h5.profile-initials {
-        font-size: 20vh;
-        color    : $light-text;
+        font-size     : 20vh;
+        color         : $light-text;
+        text-transform: uppercase;
       }
     }
 
