@@ -21,7 +21,6 @@ var messageRoutes = require('./routes/message.js');
 //added for editing
 var methodOverride = require('method-override');
 
-var humanize = require('humanize');
 
 var app = express();
 //added

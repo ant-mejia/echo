@@ -3,6 +3,7 @@
 <% include ../partials/head %>
   <body>
     <% include ../partials/header %>
+<<<<<<< HEAD
 
     <div class="container">
     <div class="row">
@@ -53,4 +54,36 @@
   </div>
 </div>
 </body>
+=======
+<div class="main-wrapper">
+<div class="uk-container">
+      <form action="<%= '/user/' + user.id + '?_method=PUT' %>" method="POST">
+        <i class="fa fa-user fa-lg" aria-hidden="true">First Name</i>
+        <input type="text" name="firstName" value="<%= user.firstname %>" />
+        <p>
+        <div class="row">
+          <i class="fa fa-user fa-lg" aria-hidden="true">Last Name</i>
+          <input id "icon_prefix" type="text" name="lastName" value="<%= user.lastname %>" />
+        </div>
+        <p>
+        <div class="row">
+          <i class="fa fa-key fa-lg" aria-hidden="true">Password</i>
+          <input id "icon_prefix" type="text" name="password" value="<%= user.password %>" />
+        </div>
+        <p>
+        <div class="row">
+          <i class="fa fa-envelope-open fa-lg" aria-hidden="true">Email</i>
+          <input id "icon_prefix" type="text" name="email" value="<%= user.email %>" />
+        </div>
+        <div class="row">
+          <input class="uk-label" type="submit" value="Save" />
+          <a href="<%= '/user/' %>" class="uk-label">Cancel</a>
+        </div>
+      </form>
+      </div>
+      </div>
+<% include ../partials/footer %>
+  </body>
+>>>>>>> 50d0ee373e8b7880e9ca3f984eb0cff41f1c4141
 </html>
+
