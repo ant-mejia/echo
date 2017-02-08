@@ -67,7 +67,7 @@ router.put('/:id', function(req, res, next) {
       originId: req.user.username
     }
   }).then(function(message){
-    res.render(`/${req.user.username}`);
+    res.redirect('/' + req.user.username);
   });
  });
 
