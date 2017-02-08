@@ -133,7 +133,8 @@ html {
         color: rgba(255, 255, 255, 0.7); }
       html body .main-profile-card h5.profile-initials {
         font-size: 20vh;
-        color: rgba(255, 255, 255, 0.7); }
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase; }
     html body form.register-form {
       padding-left: 10%; }
     html body form input {
