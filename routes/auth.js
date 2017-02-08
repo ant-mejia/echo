@@ -6,7 +6,7 @@ const passport = require('../auth/local');
 
 //changed from register to registration
 router.get('/register', authHelpers.loginRedirect, (req, res)=> {
-  res.render('auth/registration', {title: 'register', currentRoute: 'auth'});
+  res.render('auth/register', {title: 'register', currentRoute: 'auth', user: null});
 });
 
 
@@ -17,7 +17,7 @@ router.post('/register', (req, res, next)  => {
     req.login(user, (err) => {
       if (err) return next(err);
 
-      res.redirect('/user');
+      res.redirect(`/${user.username}`);
     });
   })
   .catch((err) => { res.status(500).json({ status: 'error' }); });
@@ -26,12 +26,13 @@ router.post('/register', (req, res, next)  => {
 //auth login
 router.get('/login', authHelpers.loginRedirect, (req, res)=> {
   res.render('auth/login', {
-    title: 'title'
+    title: 'title',
+    user: null
   });
 });
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/user',
+    successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true
   })

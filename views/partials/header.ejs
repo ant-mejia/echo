@@ -2,24 +2,22 @@
   <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <a class="uk-navbar-item uk-logo" href="/">Echo</a>
       <div class="uk-navbar-right">
-          <ul class="uk-navbar-nav uk-visible@m">
-              <li class="uk-active light-text"><a href="#">Profile</a></li>
-              <li class="light-text"><a href="#">Parent</a></li>
-              <li class="light-text"><a href="#">Item</a></li>
-          </ul>
+          <% if (user) { %>
+            <ul class="uk-navbar-nav uk-visible@m">
+              <li class="light-text"><a href="/about">About</a></li>
+              <li class="light-text"><a href="/contact">Contact</a></li>
+              <li class="light-text"><a href="./<%= user.username %>"><%= user.username %></a></li>
+              <li style="margin-top: 6px"><a href="./logout"><button class="uk-button uk-button-default uk-button-alert rounded-button">Sign Out</button></a></li>
+            </ul>
+          <% } else {%>
+            <ul class="uk-navbar-nav uk-visible@m">
+              <li class="light-text"><a href="/about">About</a></li>
+              <li class="light-text"><a href="/contact">Contact</a></li>
+              <li style="margin-top: 6px"><a href="/login"><button class="uk-button uk-button-default rounded-button signin-button">Sign In</button></a></li>
+            </ul>
+          <% } %>
           <span class="uk-navbar-toggle-icon uk-hidden@m" href="#mobile-menu" uk-toggle uk-icon="{icon: check}"></span>
-          <div id="mobile-menu" class="uk-modal-full" uk-modal>
-            <div class="uk-modal-dialog uk-height-viewport uk-flex-row uk-flex-middle uk-flex-center">
-              <button class="uk-modal-close-full" type="button" uk-close></button>
-              <div>
-                <div class="uk-padding-large">
-                  <h1 class="uk-text-center">Hello World</h1>
-                  <h1>Hello World</h1>
-                  <h1>Hello World</h1>
-                </div>
-              </div>
-            </div>
-          </div>
+          <% include mobile-menu %>
       </div>
   </nav>
 </header>

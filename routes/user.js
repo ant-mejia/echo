@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var authHelpers = require('../auth/auth-helpers');
 const bcrypt = require('bcryptjs');
+const moment = require('moment');
 
 
 //added to for user
@@ -11,18 +12,31 @@ var models = require('../db/models/index');
 
 
 //get user route
-router.get('/', authHelpers.loginRequired, (req, res, next) => {
-  res.render('user/index', {
-    user: req.user.dataValues,
-    title: 'user',
-    currentRoute: 'user'
-  });
-});
+router.get('/:username', authHelpers.loginRequired, (req, res, next) => {
+  models.Users.findAll({ where: { username: req.params.username }, order: [['id', 'DESC']] }).then(function(data) {
+    if (data.length) {
+      //Route to edit page
+      if (req.user.username === req.params.username) {
+        models.Messages.findAll({ where: { originId: req.params.username}}).then(function (data) {
+          res.render('user/profile', {
+            title: 'user',
+            user: req.user,
+            messages: data,
+            moment: moment
+          });
+        });
+      } else {
+        res.render('user/index', {
+          title: 'user',
+          user: req.user,
+          profile: data[0].dataValues,
+          moment: moment
+        });
+      }
 
-//Route to edit page
-router.get('/:id/edit', function(req, res, next) {
-  models.Users.findById(req.params.id).then(function(user) {
-    res.render('user/edit', { user: user });
+    } else {
+      res.redirect('/');
+    }
   });
 });
 
@@ -35,10 +49,7 @@ router.get('/:id/delete', function(req, res, next) {
 
 //edit allow the edit to work and redirects user to info page
 router.put('/:id', function(req, res, next) {
-  const salt = bcrypt.genSaltSync();
-  const hash = bcrypt.hashSync(req.body.password, salt);
    models.Users.update({
-     password: hash,
      email: req.body.email,
      firstName: req.body.firstName,
      lastName: req.body.lastName
@@ -48,9 +59,9 @@ router.put('/:id', function(req, res, next) {
  });
 
 // deletes ACTUAL USER!
-router.delete('/:id', function(req, res, next) {
+router.delete('/:username', function(req, res, next) {
  models.Users.destroy({
-   where:{ id: req.params.id }
+   where:{ username: req.params.username }
  }).then(function(user){
    res.redirect('/');
  });

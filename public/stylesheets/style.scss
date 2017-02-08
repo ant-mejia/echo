@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
 $font-stack: Helvetica, sans-serif;
+$danger: #ee395b;
 $primary-color: #333;
 $main-bg: #fbf8f4;
 $secondary-bg: #e5f6f3;
@@ -10,7 +11,7 @@ $green: #64A6AA;
 $light-green: #91C7C1;
 $light-text: rgba(255,255,255,.7);
 $green-gradient: linear-gradient($green, $light-green);
-$semicircles: url("/images/circles.png");
+$semicircles: url("/images/hill2.png");
 $lato: 'Lato', sans-serif;
 $Comfortaa: 'Comfortaa', sans-serif;
 $open-sans: 'Open Sans', sans-serif; // Styles
@@ -27,6 +28,60 @@ html {
       text-transform: uppercase;
       letter-spacing: 0.2em;
     }
+
+    .handle {
+      text-transform: lowercase;
+      font-family   : $Comfortaa;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      display  : block;
+      font-size: 20px;
+      margin   : 50px 0;
+    }
+
+    .ov-scroll {
+      overflow-y: scroll;
+    }
+
+    .page-section {
+      padding-top: 5%;
+    }
+
+    a.uk-button,
+    button.uk-button {
+      transition: all 0.3s linear;
+
+      &.uk-button-alert {
+        color: $light-text;
+      }
+
+      &.rounded-button {
+        border-radius: 40px;
+        border-width : 2px;
+        border-style : solid;
+      }
+
+      &.green {
+        color         : $green;
+        border        : 2px solid $green;
+        font-size     : 16px;
+        letter-spacing: 3px;
+      }
+
+      &.dark-hover:hover {
+        color     : $light-text;
+        background: $green;
+      }
+
+      &.alt-text {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size     : 16px;
+        font-family   : $lato;
+      }
+    }
     display       : flex;
     min-height    : 100%;
     flex-direction: column;
@@ -35,8 +90,20 @@ html {
     color         : $primary-color;
     background    : linear-gradient($secondary-bg, $main-bg -20%);
 
+    .uk-modal-dialog {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+
+      .uk-modal-close-full {
+        top  : 13px;
+        right: 13px;
+      }
+    }
+
     header.main-header {
       .uk-navbar-toggle-icon {
+        cursor      : pointer;
         margin-right: 30px;
         color       : $light-text;
       }
@@ -46,11 +113,35 @@ html {
         transition   : all 0.2s linear;
 
         .uk-logo {
-          color: $light-text;
+          font-size     : 33px;
+          font-family   : $lato;
+          font-weight   : 200;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          color         : $light-text;
         }
 
         ul.uk-navbar-nav {
+          button.signin-button {
+            border        : 2px solid $light-text;
+            color         : $light-text;
+            letter-spacing: 2px;
+            transition    : all 0.3s linear;
+            font-size     : 16px;
+
+            &:hover {
+              border-color: #fff;
+              color       : #fff;
+            }
+          }
+
           li.light-text {
+            a {
+              font-size     : 18px;
+              font-family   : $Comfortaa;
+              letter-spacing: 2px;
+            }
+
             &::before {
               content         : "";
               width           : 7px;
@@ -86,6 +177,20 @@ html {
           ul.uk-navbar-nav li.light-text a {
             color: $green;
           }
+
+          ul.uk-navbar-nav button.signin-button {
+            border-color: $green;
+            color       : $green;
+          }
+
+          ul.uk-navbar-nav li.light-text:hover::before {
+            background-color: $green;
+          }
+
+          button.uk-button-alert {
+            border-color: $danger;
+            color       : $danger;
+          }
         }
       }
     }
@@ -107,22 +212,58 @@ html {
         margin: 0;
         color : $light-text;
       }
+
+      h5.profile-initials {
+        font-size: 20vh;
+        color    : $light-text;
+      }
     }
 
-    form#login {
+    form {
+      &.register-form {
+        padding-left: 10%;
+      }
+
       input {
         display: block;
       }
     }
 
     .main-wrapper {
+      .jumbo {
+        margin-top : -110px;
+        background : $green-gradient;
+        padding-top: 110px;
+        display    : -webkit-flex;
+        display    : -ms-flex;
+        display    : flex;
+
+        h1 {
+          color: $light-text;
+        }
+
+        button {
+          border        : 2px solid $light-text;
+          color         : $light-text;
+          letter-spacing: 2px;
+          transition    : all 0.3s linear;
+          font-size     : 16px;
+
+          &:hover {
+            border-color: #fff;
+            color       : #fff;
+          }
+        }
+      }
+
       .transition-border {
-        height           : 4em;
-        width            : 100%;
-        margin-top       : -4em;
-        background-image : $semicircles;
-        background-repeat: repeat-x;
-        background-size  : cover;
+        height             : 4em;
+        width              : 100%;
+        margin-top         : -4em;
+        background-image   : $semicircles;
+        background-repeat  : repeat-x;
+        background-size    : contain;
+        background-position: bottom;
       }
       flex       : 1;
       padding-top: 110px;
@@ -141,13 +282,21 @@ html {
 
           p {
             font-weight: 400;
-            margin     : 0;
+            margin     : 10px;
             color      : $icon-color;
+
+            a:hover {
+              text-decoration: none;
+            }
           }
 
           span.title {
             color    : $text-emphasis;
             font-size: 1.3em;
+          }
+
+          a.origin {
+            margin-right: 100px;
           }
         }
       }
@@ -163,10 +312,18 @@ html {
         margin-right    : 30px;
       }
     }
+
+    #mobile-menu {
+      .handle,
+      h2 {
+        font-size  : 28px;
+        font-family: $Comfortaa;
+      }
+    }
   }
 
   footer {
-    margin-top: 50%;
+    margin-top: 20%;
     padding   : 50px;
   }
 }

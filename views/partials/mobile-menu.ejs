@@ -1,0 +1,20 @@
+<div id="mobile-menu" class="uk-modal-full" uk-modal>
+  <div class="uk-modal-dialog uk-height-viewport uk-flex-row uk-flex-middle uk-flex-center">
+    <button class="uk-modal-close-full" type="button" uk-close></button>
+    <div>
+      <div class="uk-padding-large uk-text-center">
+        <% if (user) { %>
+          <p class="handle">@<%= user.username%></p>
+          <h1><%= user.firstName%> <%= user.lastName%></h1>
+          <a class="uk-link-reset" href="/<%= user.username %>"><h2>My Profile</h2></a>
+          <a href="/logout" class="uk-link-reset"><button class="uk-button uk-button-danger rounded-button uk-align-center alt-text">Sign Out</button></a>
+        <% } else { %>
+          <a class="uk-link-reset" href="/"><h2>Home</h2></a>
+          <a class="uk-link-reset" href="/about"><h2>About Us</h2></a>
+          <a class="uk-link-reset" href="/contact"><h2>Contact</h2></a>
+          <a href="/login" class="uk-link-reset"><button class="uk-button uk-button-danger rounded-button uk-align-center alt-text">Sign In</button></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

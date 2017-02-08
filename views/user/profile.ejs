@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <% include ../partials/head %>
+  <body>
+    <% include ../partials/header %>
+      <div class='main-wrapper'>
+        <div class="uk-container">
+          <h1 class="section-title uk-text-center">My Profile</h1>
+          <form class="" action="/" method="post">
+
+          </form>
+          <ul class="uk-list uk-list-large uk-list-divider uk-height-large ov-scroll">
+            <% messages.forEach((item) => { %>
+              <li>
+                <div>
+                  <p><%= item.dataValues.content %></p>
+                  <p>Sent <%= moment(item.dataValues.createdAt).fromNow() %></p>
+                </div>
+              </li>
+            <% }) %>
+          </ul>
+          <button class="uk-button uk-button-danger rounded-button uk-align-center" type="button" uk-toggle="target: #modal-close">Delete Account</button>
+          <div id="modal-close" uk-modal="center: true">
+            <div class="uk-modal-dialog uk-modal-body uk-flex-column">
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <h2 class="uk-modal-title">Warning!</h2>
+              <p>Deleting your profile will permanently delete all data associated with your profile. This action cannot be undone.</p><p>Are you sure you want to delete your profile?</p>
+              <form class="" action="/<%= user.username %>?_method=DELETE" method="POST">
+                <button class="uk-button uk-button-danger uk-align-center rounded-button" type="submit">Delete Account</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% include ../partials/footer %>
+  </body>
+  <% include ../partials/scripts %>
+</html>

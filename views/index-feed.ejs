@@ -4,13 +4,13 @@
 <% include partials/head %>
     <body class='Feed'>
       <% include partials/header %>
-        <div class="main-wrapper">
+        <div class="main-wrapper trans-top">
           <% include partials/main-profile-card %>
           <div class="transition-border"></div>
             <div id="message-feed" class="uk-container">
                 <h1>Feed</h1>
                 <% include partials/message-feed %>
-                <a class="uk-button uk-button-default" href="#modal-full" uk-toggle>Open</a>
+                <a class="uk-button uk-button-default rounded-button" href="#modal-full" uk-toggle>Open</a>
                 <div id="modal-full" class="uk-modal-full" uk-modal>
                     <div class="uk-modal-dialog">
                         <button class="uk-modal-close-full" type="button" uk-close></button>

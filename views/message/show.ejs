@@ -1,14 +1,25 @@
-<!-- <body>
-  hey i am a message
-</body> -->
 <!DOCTYPE html>
 <html>
-  <div>
-        <span class="reply">
-          <p><%= message.content %></p>
-
-          This is the unique clicked message
-        </span>
+  <% include ../partials/head %>
+  <body>
+    <% include ../partials/header %>
+    <div class="main-wrapper">
+      <div class="uk-container">
+        <div class="message-detail uk-padding-large">
+          <p><a class="uk-link-muted" href="/<%= message.originId %>">
+            <span class="sender">@<%= message.originId %></span>
+          </a></p>
+          <h4 class=""><%= message.content %></h4>
+          <p>Sent <%= moment(message.createdAt).fromNow() %></p>
+          <% if (message.originId === user.username) { %>
+            <form class="" action="/m/<%= message.id %>?_method=DELETE" method="POST">
+              <button class="uk-button uk-button-danger uk-align-center rounded-button" type="submit">Delete Message</button>
+            </form>
+          <% } %>
         </div>
+      </div>
+    </div>
+    <% include ../partials/footer %>
   </body>
+  <% include ../partials/scripts %>
 </html>

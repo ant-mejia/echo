@@ -16,14 +16,79 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
+    html body .handle {
+      text-transform: lowercase;
+      font-family: "Comfortaa", sans-serif; }
+    html body input[type="password"],
+    html body input[type="text"] {
+      display: block;
+      font-size: 20px;
+      margin: 50px 0; }
+    html body .ov-scroll {
+      overflow-y: scroll; }
+    html body .page-section {
+      padding-top: 5%; }
+    html body a.uk-button,
+    html body button.uk-button {
+      transition: all 0.3s linear; }
+      html body a.uk-button.uk-button-alert,
+      html body button.uk-button.uk-button-alert {
+        color: rgba(255, 255, 255, 0.7); }
+      html body a.uk-button.rounded-button,
+      html body button.uk-button.rounded-button {
+        border-radius: 40px;
+        border-width: 2px;
+        border-style: solid; }
+      html body a.uk-button.green,
+      html body button.uk-button.green {
+        color: #64A6AA;
+        border: 2px solid #64A6AA;
+        font-size: 16px;
+        letter-spacing: 3px; }
+      html body a.uk-button.dark-hover:hover,
+      html body button.uk-button.dark-hover:hover {
+        color: rgba(255, 255, 255, 0.7);
+        background: #64A6AA; }
+      html body a.uk-button.alt-text,
+      html body button.uk-button.alt-text {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 16px;
+        font-family: "Lato", sans-serif; }
+    html body .uk-modal-dialog {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex; }
+      html body .uk-modal-dialog .uk-modal-close-full {
+        top: 13px;
+        right: 13px; }
     html body header.main-header .uk-navbar-toggle-icon {
+      cursor: pointer;
       margin-right: 30px;
       color: rgba(255, 255, 255, 0.7); }
     html body header.main-header nav.uk-navbar-container {
       margin-bottom: -100%;
       transition: all 0.2s linear; }
       html body header.main-header nav.uk-navbar-container .uk-logo {
+        font-size: 33px;
+        font-family: "Lato", sans-serif;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 4px;
         color: rgba(255, 255, 255, 0.7); }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav button.signin-button {
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 2px;
+        transition: all 0.3s linear;
+        font-size: 16px; }
+        html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav button.signin-button:hover {
+          border-color: #fff;
+          color: #fff; }
+      html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text a {
+        font-size: 18px;
+        font-family: "Comfortaa", sans-serif;
+        letter-spacing: 2px; }
       html body header.main-header nav.uk-navbar-container ul.uk-navbar-nav li.light-text::before {
         content: "";
         width: 7px;
@@ -45,6 +110,14 @@ html {
         html body header.main-header nav.uk-navbar-container.uk-navbar-opaque .uk-navbar-toggle-icon,
         html body header.main-header nav.uk-navbar-container.uk-navbar-opaque ul.uk-navbar-nav li.light-text a {
           color: #64A6AA; }
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque ul.uk-navbar-nav button.signin-button {
+          border-color: #64A6AA;
+          color: #64A6AA; }
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque ul.uk-navbar-nav li.light-text:hover::before {
+          background-color: #64A6AA; }
+        html body header.main-header nav.uk-navbar-container.uk-navbar-opaque button.uk-button-alert {
+          border-color: #ee395b;
+          color: #ee395b; }
     html body .main-profile-card {
       background: linear-gradient(#64A6AA, #91C7C1);
       padding: 110px 10%;
@@ -58,18 +131,42 @@ html {
       html body .main-profile-card h4.profile-details {
         margin: 0;
         color: rgba(255, 255, 255, 0.7); }
-    html body form#login input {
+      html body .main-profile-card h5.profile-initials {
+        font-size: 20vh;
+        color: rgba(255, 255, 255, 0.7); }
+    html body form.register-form {
+      padding-left: 10%; }
+    html body form input {
       display: block; }
     html body .main-wrapper {
       flex: 1;
       padding-top: 110px; }
+      html body .main-wrapper .jumbo {
+        margin-top: -110px;
+        background: linear-gradient(#64A6AA, #91C7C1);
+        padding-top: 110px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex; }
+        html body .main-wrapper .jumbo h1 {
+          color: rgba(255, 255, 255, 0.7); }
+        html body .main-wrapper .jumbo button {
+          border: 2px solid rgba(255, 255, 255, 0.7);
+          color: rgba(255, 255, 255, 0.7);
+          letter-spacing: 2px;
+          transition: all 0.3s linear;
+          font-size: 16px; }
+          html body .main-wrapper .jumbo button:hover {
+            border-color: #fff;
+            color: #fff; }
       html body .main-wrapper .transition-border {
         height: 4em;
         width: 100%;
         margin-top: -4em;
-        background-image: url("/images/circles.png");
+        background-image: url("/images/hill2.png");
         background-repeat: repeat-x;
-        background-size: cover; }
+        background-size: contain;
+        background-position: bottom; }
     html body ul#message-list {
       padding: 0;
       margin: 0;
@@ -80,11 +177,15 @@ html {
           padding: 0 40px; }
           html body ul#message-list li div p {
             font-weight: 400;
-            margin: 0;
+            margin: 10px;
             color: #c0c0c0; }
+            html body ul#message-list li div p a:hover {
+              text-decoration: none; }
           html body ul#message-list li div span.title {
             color: #556073;
             font-size: 1.3em; }
+          html body ul#message-list li div a.origin {
+            margin-right: 100px; }
       html body ul#message-list li span.title::before {
         content: " ";
         width: 7px;
@@ -94,8 +195,12 @@ html {
         display: inline-block;
         margin-left: -37px;
         margin-right: 30px; }
+    html body #mobile-menu .handle,
+    html body #mobile-menu h2 {
+      font-size: 28px;
+      font-family: "Comfortaa", sans-serif; }
   html footer {
-    margin-top: 50%;
+    margin-top: 20%;
     padding: 50px; }
 
 /*# sourceMappingURL=style.css.map */

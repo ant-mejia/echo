@@ -64,9 +64,9 @@ app.use('/', index);
 // app.use('/users', users);
 //ADDED USER ROUTES
 app.use('/', authRoutes);
-app.use('/user', userRoutes);
+app.use('/', userRoutes);
 app.use('/comments', commentsRoutes);
-app.use('/messages', messageRoutes);
+app.use('/m', messageRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

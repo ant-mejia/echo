@@ -5,11 +5,10 @@
     <% include ../partials/header %>
       <div class='main-wrapper'>
         <div class="uk-container">
-          <h1 style="display:flex; justify-content:center;">You are now signed in as:</h1>
-          <h1 style="display:flex; justify-content:center;"><%= user.username %></h1>
+          <h1 class="section-title uk-text-center"><%= profile.username %></h1>
         </div>
       </div>
-      <a href="<%= `/user/${user.id}/edit` %>">Edit Profile</a>
-      <a href="/logout">Logout</a>
-      <a href="<%= `/user/${user.id}/delete` %>">Delete Profile</a>
     <% include ../partials/footer %>
+  </body>
+  <% include ../partials/scripts %>
+</html>
