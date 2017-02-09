@@ -1,6 +1,11 @@
 # ECHO
 
-status messaging app using Express js framework.
+####Problem 
+Social media often promotes content based on popularity of the individual rather than the quality of the content.
+
+---
+####Opportunity
+To create a platform that will encourage people to post thoughtful content by focusing on quality of what people are saying. Popularity will be determined by the post itself rather than who is posting or the relationships that the users have with one another.
 
 ## Getting Started
 
@@ -54,7 +59,11 @@ for developing fast and powerful web interfaces.
 
 ## Deployment
 
-* [Heroku](https://devcenter.heroku.com/) - Heroku lets you deploy, run and manage applications written in Ruby, Node.js, Java, Python, Clojure, Scala, Go and PHP.
+* [Heroku](https://echotalk.herokuapp.com/) - Heroku lets you deploy, run and manage applications written in Ruby, Node.js, Java, Python, Clojure, Scala, Go and PHP.
+
+## UX/UI Collaboration
+
+* [UX/UI Design](https://github.com/ant-mejia/echo/blob/reply/public/collaboration.key) - With the help of the UX/UI team, they help us create a user interface in order to satisfy our audience. The following link will display our problem statement and key notes about the project. 
 
 ## Wireframe
 
