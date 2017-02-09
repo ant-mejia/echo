@@ -105,3 +105,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Congrats to the Team effort
 * Inspiration
 * Dedication
+* BIG THANKS to the UX Team (Sohee, Chrissy, and Kathleen) for working with us and turning our idea into a tangible wireframe!!
