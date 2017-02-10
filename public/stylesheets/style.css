@@ -45,6 +45,10 @@ html {
         border: 2px solid #64A6AA;
         font-size: 16px;
         letter-spacing: 3px; }
+        html body a.uk-button.green:hover,
+        html body button.uk-button.green:hover {
+          color: #4e8a8d;
+          border-color: #4e8a8d; }
       html body a.uk-button.dark-hover:hover,
       html body button.uk-button.dark-hover:hover {
         color: rgba(255, 255, 255, 0.7);

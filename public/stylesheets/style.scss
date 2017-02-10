@@ -68,6 +68,11 @@ html {
         border        : 2px solid $green;
         font-size     : 16px;
         letter-spacing: 3px;
+
+        &:hover {
+          color       : darken($green, 10%);
+          border-color: darken($green, 10%);
+        }
       }
 
       &.dark-hover:hover {
