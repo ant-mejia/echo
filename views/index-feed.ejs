@@ -7,21 +7,17 @@
         <div class="main-wrapper trans-top">
           <% include partials/main-profile-card %>
           <div class="transition-border uk-animation-slide-bottom-medium"></div>
-            <div id="message-feed" class="uk-container">
+            <div id="message-feed" class="uk-container uk-margin-large-top">
                 <h1 class="uk-animation-fade">Feed</h1>
-                <a class="uk-button uk-button-default rounded-button green" href="#modal-full" uk-toggle>New Message</a>
-                <div id="modal-full" class="uk-modal-full" uk-modal>
-                    <div class="uk-modal-dialog">
-                        <button class="uk-modal-close-full" type="button" uk-close></button>
-                        <div>
-                            <div class="uk-padding-large uk-height-viewport">
-                              <form class="new-message uk-height-1-1" action="/" method="post">
-                                <input class="uk-input uk-form-blank uk-form-width-medium db" type="text" name="content" placeholder="Enter Message">
-                                <button class="uk-button uk-button-primary db" type="submit">Add Message</button>
-                              </form>
-                            </div>
-                        </div>
-                    </div>
+                <a class="uk-button uk-button-default rounded-button green" href="#add-message" uk-toggle>New Message</a>
+                <div id="add-message" class="uk-modal-full uk-modal" uk-modal>
+                  <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+                    <button class="uk-modal-close-full" type="button" uk-close></button>
+                    <form class="uk-search-large" action="/" method="post">
+                      <input class="uk-search-input uk-text-center" type="text" name="content" placeholder="Enter Message" autofocus>
+                      <button class="uk-button uk-align-center uk-button-default rounded-button green uk-hidden@m" type="submit">Add Message</button>
+                    </form>
+                  </div>
                 </div>
                 <% include partials/message-feed %>
               </div>

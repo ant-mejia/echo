@@ -1,6 +1,6 @@
-<ul class="uk-list uk-animation-fade" id="message-list" style="list-style-type: none;">
+<ul class="uk-list uk-animation-fade uk-margin-large-top" id="message-list">
   <% messages.forEach((item) => { %>
-    <li class="message" style="list-style-type: none;">
+    <li class="message">
       <div>
         <span class="title"><a class="uk-link-reset" href="<%= '/m/' + item.id %>"><%= item.content %></a></span>
         <p>

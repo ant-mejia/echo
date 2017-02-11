@@ -6,14 +6,14 @@
     <div class="main-wrapper">
       <div class="uk-container">
         <div class="message-detail uk-padding-large">
-          <p><a class="uk-link-muted" href="/<%= message.originId %>">
+          <p></p>
+          <h4 class="message-big"><%= message.content %></h4>
+          <p class="message-info"><a class="uk-link-muted uk-margin-large-right" href="/<%= message.originId %>">
             <span class="sender">@<%= message.originId %></span>
-          </a></p>
-          <h4 class=""><%= message.content %></h4>
-          <p>Sent <%= moment(message.createdAt).fromNow() %></p>
+          </a>Sent <%= moment(message.createdAt).fromNow() %></p>
           <% if (message.originId === user.username) { %>
             <form class="" action="/<%= message.id %>?_method=DELETE" method="POST">
-              <button class="uk-button uk-button-danger uk-align-center rounded-button" type="submit">Delete Message</button>
+              <button class="uk-button uk-button-danger uk-align-center uk-margin-xlarge-top rounded-button" type="submit">Delete Message</button>
             </form>
           <% } %>
         </div>

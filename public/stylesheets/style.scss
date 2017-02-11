@@ -275,6 +275,17 @@ html {
       padding-top: 110px;
     }
 
+    .message-big {
+      color      : $text-emphasis;
+      font-size  : 1.6em;
+      font-family: $Comfortaa;
+    }
+
+    .message-info {
+      font-family: $Comfortaa;
+      color      : $text-emphasis;
+    }
+
     ul#message-list {
       padding    : 0;
       margin     : 0;

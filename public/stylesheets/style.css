@@ -172,6 +172,13 @@ html {
         background-repeat: repeat-x;
         background-size: contain;
         background-position: bottom; }
+    html body .message-big {
+      color: #556073;
+      font-size: 1.6em;
+      font-family: "Comfortaa", sans-serif; }
+    html body .message-info {
+      font-family: "Comfortaa", sans-serif;
+      color: #556073; }
     html body ul#message-list {
       padding: 0;
       margin: 0;
