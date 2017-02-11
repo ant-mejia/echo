@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
 $font-stack: Helvetica, sans-serif;
 $danger: #ee395b;
 $primary-color: #333;
@@ -29,6 +29,11 @@ html {
       letter-spacing: 0.2em;
     }
 
+    h4.alt {
+      font-family: $Comfortaa;
+      color      : $text-emphasis;
+    }
+
     .handle {
       text-transform: lowercase;
       font-family   : $Comfortaa;
@@ -39,6 +44,11 @@ html {
       display  : block;
       font-size: 20px;
       margin   : 50px 0;
+
+      &.alt {
+        font-family: $Comfortaa;
+        color      : darken($icon-color, 20%);
+      }
     }
 
     .ov-scroll {
@@ -299,7 +309,7 @@ html {
 
           p {
             font-weight: 400;
-            margin     : 10px;
+            margin     : 10px 0;
             color      : $icon-color;
 
             a:hover {

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,200,300,400|Comfortaa:400|Open+Sans:400italic,700italic,400,700);
 html {
   height: 100%; }
   html body {
@@ -16,6 +16,9 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
+    html body h4.alt {
+      font-family: "Comfortaa", sans-serif;
+      color: #556073; }
     html body .handle {
       text-transform: lowercase;
       font-family: "Comfortaa", sans-serif; }
@@ -24,6 +27,10 @@ html {
       display: block;
       font-size: 20px;
       margin: 50px 0; }
+      html body input[type="password"].alt,
+      html body input[type="text"].alt {
+        font-family: "Comfortaa", sans-serif;
+        color: #8d8d8d; }
     html body .ov-scroll {
       overflow-y: scroll; }
     html body .page-section {
@@ -189,7 +196,7 @@ html {
           padding: 0 40px; }
           html body ul#message-list li div p {
             font-weight: 400;
-            margin: 10px;
+            margin: 10px 0;
             color: #c0c0c0; }
             html body ul#message-list li div p a:hover {
               text-decoration: none; }

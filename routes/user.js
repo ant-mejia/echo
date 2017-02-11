@@ -48,12 +48,12 @@ router.get('/:id/delete', function(req, res, next) {
 });
 
 //edit allow the edit to work and redirects user to info page
-router.put('/:id', function(req, res, next) {
+router.post('/:username', function(req, res, next) {
    models.Users.update({
      email: req.body.email,
      firstName: req.body.firstName,
      lastName: req.body.lastName
-   }, { where: { id: req.params.id } }).then(function() {
+   }, { where: { username: req.params.username } }).then(function() {
      res.redirect('/');
    });
  });

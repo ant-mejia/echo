@@ -6,10 +6,31 @@
       <div class='main-wrapper'>
         <div class="uk-container">
           <h1 class="section-title uk-text-center">My Profile</h1>
-          <form class="" action="/" method="post">
-
-          </form>
-          <ul class="uk-list uk-list-large uk-list-divider uk-height-large ov-scroll">
+          <button class="uk-button uk-button-default rounded-button green uk-align-center" type="button" uk-toggle="target: #edit-profile">Edit Profile</button>
+          <div id="edit-profile" uk-modal="center: true">
+            <div class="uk-modal-dialog uk-modal-body uk-flex-column">
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <h2 class="uk-modal-title uk-text-nowrap">Edit Profile</h2>
+              <form class="uk-form-stacked uk-padding-large uk-padding-remove-bottom" action="/<%= user.username %>" method="POST">
+                <div class="uk-form-controls">
+                  <label class="uk-form-label" for="form-horizontal-text"><h4 class="alt">Email Address</h4></label>
+                  <input type="text" name="email" class="uk-input uk-form-blank uk-form-width-medium uk-margin-remove-top alt" placeholder="Email Address" value="<%= user.email %>">
+                </div>
+                <div class="uk-form-controls">
+                  <label class="uk-form-label" for="form-horizontal-text"><h4 class="alt">First Name</h4></label>
+                  <input type="text" name="firstName" class="uk-input uk-form-blank uk-form-width-medium uk-margin-remove-top alt" placeholder="First Name" value="<%= user.firstName %>">
+                </div>
+                <div class="uk-form-controls">
+                  <label class="uk-form-label" for="form-horizontal-text"><h4 class="alt">Last Name</h4></label>
+                  <input type="text" name="lastName" class="uk-input uk-form-blank uk-form-width-medium uk-margin-remove-top alt" placeholder="Last Name" value="<%= user.lastName %>">
+                </div>
+              <div class="uk-modal-footer uk-text-center">
+                <button class="uk-button uk-button-default green rounded-button" type="submit">Save</button>
+              </div>
+            </form>
+            </div>
+          </div>
+          <ul class="uk-list uk-list-large uk-list-divider uk-height-large ov-scroll uk-margin-large uk-padding-large">
             <% messages.forEach((item) => { %>
               <li>
                 <div>
