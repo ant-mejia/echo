@@ -15,6 +15,8 @@ html {
         opacity: 0.5; }
       html body .main-icon.green {
         color: #64A6AA; }
+      html body .main-icon.grey {
+        color: #556073; }
     html body .Comfortaa {
       font-family: "Comfortaa", sans-serif !important; }
     html body h1,
