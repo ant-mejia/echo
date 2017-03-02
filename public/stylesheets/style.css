@@ -9,6 +9,14 @@ html {
     font-weight: normal;
     color: #333;
     background: linear-gradient(#e5f6f3, #fbf8f4 -20%); }
+    html body .main-icon {
+      font-size: 80px; }
+      html body .main-icon.half-op {
+        opacity: 0.5; }
+      html body .main-icon.green {
+        color: #64A6AA; }
+    html body .Comfortaa {
+      font-family: "Comfortaa", sans-serif !important; }
     html body h1,
     html body h2,
     html body h3 {
@@ -16,7 +24,11 @@ html {
       font-family: "Lato", sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.2em; }
-    html body h4.alt {
+    html body p.big {
+      font-size: 22px; }
+    html body p.medium {
+      font-size: 18px; }
+    html body .alt {
       font-family: "Comfortaa", sans-serif;
       color: #556073; }
     html body .handle {
@@ -222,7 +234,6 @@ html {
       font-size: 28px;
       font-family: "Comfortaa", sans-serif; }
   html footer {
-    margin-top: 20%;
-    padding: 50px; }
+    background-color: rgba(0, 0, 0, 0.04); }
 
 /*# sourceMappingURL=style.css.map */
