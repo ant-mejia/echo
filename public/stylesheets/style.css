@@ -34,11 +34,13 @@ html {
     html body .handle {
       text-transform: lowercase;
       font-family: "Comfortaa", sans-serif; }
+    html body input[type="email"],
     html body input[type="password"],
     html body input[type="text"] {
       display: block;
       font-size: 20px;
       margin: 50px 0; }
+      html body input[type="email"].alt,
       html body input[type="password"].alt,
       html body input[type="text"].alt {
         font-family: "Comfortaa", sans-serif;
