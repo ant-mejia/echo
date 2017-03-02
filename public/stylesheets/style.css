@@ -73,6 +73,9 @@ html {
       html body .uk-modal-dialog .uk-modal-close-full {
         top: 13px;
         right: 13px; }
+    html body .profile-message {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 20px; }
     html body header.main-header .uk-navbar-toggle-icon {
       cursor: pointer;
       margin-right: 30px;

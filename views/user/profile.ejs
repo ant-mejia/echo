@@ -30,19 +30,23 @@
             </form>
             </div>
           </div>
-          <ul class="uk-list uk-list-large uk-list-divider uk-height-large ov-scroll uk-margin-large uk-padding-large">
-            <% messages.forEach((item) => { %>
-              <li>
-                <div>
-                  <p><%= item.dataValues.content %></p>
-                  <p>Sent <%= moment(item.dataValues.createdAt).fromNow() %></p>
-                  <form action="/m/<%= item.id %>?_method=DELETE" method="POST">
-                    <button class="uk-button uk-button-default rounded-button" type="submit">Delete</button>
-                  </form>
-                </div>
-              </li>
-            <% }) %>
-          </ul>
+          <% if (messages.length > 0) { %>
+            <ul class="uk-list uk-list-large uk-list-divider uk-height-large ov-scroll uk-margin-large uk-padding-large">
+              <% messages.forEach((item) => { %>
+                <li>
+                  <div>
+                    <a class="uk-link-reset profile-message" href="/m/<%= item.id %>"><p><%= item.dataValues.content %></p></a>
+                    <p>Sent <%= moment(item.dataValues.createdAt).fromNow() %></p>
+                    <form action="/m/<%= item.id %>?_method=DELETE" method="POST">
+                      <button class="uk-button uk-button-default rounded-button" type="submit">Delete</button>
+                    </form>
+                  </div>
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <h1 class="uk-text-center uk-margin-xlarge uk-text-nowrap uk-text-large">No Messages..</h1>
+          <% } %>
           <button class="uk-button uk-button-danger rounded-button uk-align-center" type="button" uk-toggle="target: #modal-close">Delete Account</button>
           <div id="modal-close" uk-modal="center: true">
             <div class="uk-modal-dialog uk-modal-body uk-flex-column">
