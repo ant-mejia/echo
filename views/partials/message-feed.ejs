@@ -9,6 +9,19 @@
           </a>
           <span class=""><%= moment(item.createdAt).fromNow() %></span>
         </p>
+        <% if (item.originId !== user.username) { %>
+          <form class="submit-like" class="uk-search-large" action="<%= '/m/' + item.id %>" method="post">
+            <button type="submit" class="like-button">
+            <% let liked = '' %>
+              <% likes.map((like) => { %>
+                <% if (like.originId === item.id) { %>
+                  <% liked = 'icon-pink' %>
+                <% } %>
+              <% }) %>
+              <span class="uk-align-center icon-heart <%= liked %>"></span>
+            </button>
+          </form>
+        <% } %>
       </div>
     </li>
   <% }) %>

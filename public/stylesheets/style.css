@@ -226,6 +226,21 @@ html {
             font-size: 1.3em; }
           html body ul#message-list li div a.origin {
             margin-right: 100px; }
+          html body ul#message-list li div button.like-button {
+            background-color: transparent;
+            border: none; }
+            html body ul#message-list li div button.like-button:focus {
+              outline: 0; }
+            html body ul#message-list li div button.like-button span {
+              font-size: 20px;
+              transition: all 0.3s linear;
+              color: #556073; }
+              html body ul#message-list li div button.like-button span:hover {
+                color: #3f4856; }
+              html body ul#message-list li div button.like-button span.icon-pink {
+                color: #e23e88; }
+                html body ul#message-list li div button.like-button span.icon-pink:hover {
+                  color: #ce1f6e; }
       html body ul#message-list li span.title::before {
         content: " ";
         width: 7px;

@@ -10,6 +10,7 @@ $text-emphasis: #556073;
 $green: #64A6AA;
 $light-green: #91C7C1;
 $light-text: rgba(255,255,255,.7);
+$pink: #e23e88;
 $green-gradient: linear-gradient($green, $light-green);
 $semicircles: url("/images/hill2.png");
 $lato: 'Lato', sans-serif;
@@ -364,6 +365,33 @@ html {
 
           a.origin {
             margin-right: 100px;
+          }
+
+          button.like-button {
+            background-color: transparent;
+            border          : none;
+
+            &:focus {
+              outline: 0;
+            }
+
+            span {
+              font-size : 20px;
+              transition: all 0.3s linear;
+              color     : $text-emphasis;
+
+              &:hover {
+                color: darken($text-emphasis, 10);
+              }
+
+              &.icon-pink {
+                color: $pink;
+
+                &:hover {
+                  color: darken($pink, 10);
+                }
+              }
+            }
           }
         }
       }

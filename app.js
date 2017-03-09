@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
 var index = require('./routes/index');
 
 //trouble had my routes named as users instead of user
@@ -21,7 +20,6 @@ var messageRoutes = require('./routes/message.js');
 //added for editing
 var methodOverride = require('method-override');
 
-
 var app = express();
 //added
 require('dotenv').config();
@@ -36,7 +34,7 @@ app.set('view engine', 'ejs');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
@@ -47,23 +45,16 @@ app.use(require('node-sass-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // added for express-session and passport require
-app.use(session({
-  secret: process.env.SECRET_KEY,
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(session({secret: process.env.SECRET_KEY, resave: false, saveUninitialized: true}));
 //not sure if i should add
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 
 app.use('/', index);
 // app.use('/users', users);
 //ADDED USER ROUTES
 app.use('/', authRoutes);
 app.use('/', userRoutes);
-app.use('/comments', commentsRoutes);
 app.use('/m', messageRoutes);
 
 // catch 404 and forward to error handler
@@ -77,7 +68,9 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get('env') === 'development'
+    ? err
+    : {};
 
   // render the error page
   res.status(err.status || 500);

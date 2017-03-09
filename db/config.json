@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "YOUR_DB_USERNAME",
+    "username": "antmejia",
     "password": null,
     "database": "echo",
     "host": "127.0.0.1",
