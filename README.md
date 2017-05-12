@@ -2,11 +2,11 @@
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/22961657/22836121/22c7b270-ef89-11e6-880c-8dca480fa621.png)
 
-####Problem
+#### Problem
 Social media often promotes content based on popularity of the individual rather than the quality of the content.
 
 ---
-####Opportunity
+#### Opportunity
 To create a platform that will encourage people to post thoughtful content by focusing on quality of what people are saying. Popularity will be determined by the post itself rather than who is posting or the relationships that the users have with one another.
 
 ## Getting Started
