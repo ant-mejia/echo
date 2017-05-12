@@ -8,9 +8,9 @@ const moment = require('moment');
 
 // Logic for implementing user levels
 function rank(num) {
-  num = num < 1 ?
-    1 :
-    num;
+  num = num < 1
+    ? 1
+    : num;
   return Math.floor((num / (Math.sqrt(num))) / Math.E) + 1;
 }
 /* GET home page. */
@@ -77,6 +77,8 @@ router.get('/contact', (req, res, next) => {
 
 router.post('/', authHelpers.loginRequired, (req, res, next) => {
   msg.create(req, res);
+  const clientIp = requestIp.getClientIp(req);
+  console.log('CLIENTIP ADDRESS', clientIp);
   res.redirect('/');
 });
 
